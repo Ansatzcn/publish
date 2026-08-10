@@ -583,6 +583,13 @@
       ]
     },
     {
+      "id": "71dde2ac-2298-4f3f-877c-25e184fb10cb",
+      "publisher": "[文物出版社](https://book.douban.com/press/2456/?order=time)",
+      "bookNumbers": [
+        "7-5010"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -731,6 +738,7 @@
     "7-5007",
     "7-5008",
     "7-5009",
+    "7-5010",
     "7-5095",
     "7-5097",
     "7-5148",
