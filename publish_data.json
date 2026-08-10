@@ -91,6 +91,13 @@
       "bookNumbers": [
         "7-108"
       ]
+    },
+    {
+      "id": "6d99af63-5f9a-494b-9ebb-dbf83d9f7a6a",
+      "publisher": "[中国农业出版社](https://book.douban.com/press/2769/?order=time)",
+      "bookNumbers": [
+        "7-109"
+      ]
     }
   ],
   "bookNumbers": [
@@ -106,6 +113,7 @@
     "7-105",
     "7-106",
     "7-107",
-    "7-108"
+    "7-108",
+    "7-109"
   ]
 }
