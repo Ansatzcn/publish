@@ -303,6 +303,15 @@
       ]
     },
     {
+      "id": "ba72fb3d-8d6b-47b8-a1d9-a9284e1a6a9d",
+      "publisher": "[湖南人民出版社](https://book.douban.com/press/2248?order=time)",
+      "bookNumbers": [
+        "7-217",
+        "7-5438",
+        "7-5561"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -407,6 +416,8 @@
     "7-214",
     "7-215",
     "7-216",
-    "7-5438"
+    "7-5438",
+    "7-5561",
+    "7-217"
   ]
 }
