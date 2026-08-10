@@ -505,6 +505,13 @@
       ]
     },
     {
+      "id": "0d4ab820-a9e6-4312-b9d8-92beaf409efb",
+      "publisher": "[中国大百科全书出版社](https://book.douban.com/press/2641/?order=time)",
+      "bookNumbers": [
+        "7-5000"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -643,6 +650,7 @@
     "7-311",
     "7-312",
     "7-313",
+    "7-5000",
     "7-5097",
     "7-5201",
     "7-5202",
