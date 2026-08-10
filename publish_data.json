@@ -282,6 +282,13 @@
       "bookNumbers": [
         "7-5505"
       ]
+    },
+    {
+      "id": "9861a89d-209d-40c7-9869-7aa8b0f3b789",
+      "publisher": "[泰山出版社](https://book.douban.com/press/2232/?order=time)",
+      "bookNumbers": [
+        "7-5519"
+      ]
     }
   ],
   "bookNumbers": [
@@ -326,6 +333,7 @@
     "7-5496",
     "7-5500",
     "7-5501",
-    "7-5505"
+    "7-5505",
+    "7-5519"
   ]
 }
