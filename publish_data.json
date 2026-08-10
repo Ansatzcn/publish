@@ -633,6 +633,14 @@
       ]
     },
     {
+      "id": "a56c38ad-add9-451f-8edc-0fd1b6046717",
+      "publisher": "[中国经济出版社](https://book.douban.com/press/2640/?order=time)",
+      "bookNumbers": [
+        "7-5017",
+        "7-5136"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -788,8 +796,10 @@
     "7-5014",
     "7-5015",
     "7-5016",
+    "7-5017",
     "7-5095",
     "7-5097",
+    "7-5136",
     "7-5148",
     "7-5153",
     "7-5161",
