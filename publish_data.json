@@ -561,6 +561,14 @@
       ]
     },
     {
+      "id": "914a8d1f-e864-4f85-b9fd-cfa395733122",
+      "publisher": "[中国少年儿童出版社](https://book.douban.com/press/2848/?order=time)",
+      "bookNumbers": [
+        "7-5007",
+        "7-5148"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -706,8 +714,10 @@
     "7-5004",
     "7-5005",
     "7-5006",
+    "7-5007",
     "7-5095",
     "7-5097",
+    "7-5148",
     "7-5153",
     "7-5161",
     "7-5201",
