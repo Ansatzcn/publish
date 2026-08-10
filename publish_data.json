@@ -326,6 +326,13 @@
       ]
     },
     {
+      "id": "1fb44d13-aed7-46ac-8ba1-7ae875c9a46b",
+      "publisher": "[清华大学出版社](https://book.douban.com/press/2562/?order=time)",
+      "bookNumbers": [
+        "7-302"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -434,6 +441,7 @@
     "7-5561",
     "7-217",
     "7-225",
-    "7-301"
+    "7-301",
+    "7-302"
   ]
 }
