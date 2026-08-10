@@ -527,6 +527,13 @@
       ]
     },
     {
+      "id": "b13bdb80-66da-4c3a-821e-4fafff8b4d19",
+      "publisher": "[荣宝斋出版社](https://book.douban.com/press/2223/?order=time)",
+      "bookNumbers": [
+        "7-5003"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -668,6 +675,7 @@
     "7-5000",
     "7-5001",
     "7-5002",
+    "7-5003",
     "7-5097",
     "7-5201",
     "7-5202",
