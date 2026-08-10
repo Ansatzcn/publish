@@ -261,6 +261,13 @@
       ]
     },
     {
+      "id": "a4a5d27e-a36a-4411-b2df-66480d0f68b5",
+      "publisher": "[福建人民出版社](https://book.douban.com/press/2840/?order=time)",
+      "bookNumbers": [
+        "7-211"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -358,6 +365,7 @@
     "7-5519",
     "7-5520",
     "7-209",
-    "7-210"
+    "7-210",
+    "7-211"
   ]
 }
