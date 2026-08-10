@@ -98,6 +98,13 @@
       "bookNumbers": [
         "7-109"
       ]
+    },
+    {
+      "id": "ee0aa71d-7b5c-427b-921b-7eb926387d6e",
+      "publisher": "[科学普及出版社](https://book.douban.com/press/2301/?order=time)",
+      "bookNumbers": [
+        "7-110"
+      ]
     }
   ],
   "bookNumbers": [
@@ -114,6 +121,7 @@
     "7-106",
     "7-107",
     "7-108",
-    "7-109"
+    "7-109",
+    "7-110"
   ]
 }
