@@ -354,6 +354,13 @@
       ]
     },
     {
+      "id": "2d9f9f2f-fb06-4e09-890f-74f31691ea8d",
+      "publisher": "[陕西人民出版社](https://book.douban.com/press/2749/?order=time)",
+      "bookNumbers": [
+        "7-224"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -456,6 +463,7 @@
     "7-221",
     "7-222",
     "7-223",
+    "7-224",
     "7-5097",
     "7-5201",
     "7-5228",
