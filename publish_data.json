@@ -569,6 +569,13 @@
       ]
     },
     {
+      "id": "85e38ec5-d279-4e0f-a558-1f277184e8cc",
+      "publisher": "[中国工人出版社](https://book.douban.com/press/2774/?order=time)",
+      "bookNumbers": [
+        "7-5008"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -715,6 +722,7 @@
     "7-5005",
     "7-5006",
     "7-5007",
+    "7-5008",
     "7-5095",
     "7-5097",
     "7-5148",
