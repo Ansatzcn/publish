@@ -275,6 +275,13 @@
       "bookNumbers": [
         "7-5501"
       ]
+    },
+    {
+      "id": "3967ad8b-198a-4fa7-881b-3f38b3233c48",
+      "publisher": "[大连出版社](https://book.douban.com/press/2814/?order=time)",
+      "bookNumbers": [
+        "7-5505"
+      ]
     }
   ],
   "bookNumbers": [
@@ -318,6 +325,7 @@
     "7-208",
     "7-5496",
     "7-5500",
-    "7-5501"
+    "7-5501",
+    "7-5505"
   ]
 }
