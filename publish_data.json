@@ -147,6 +147,13 @@
       "bookNumbers": [
         "7-116"
       ]
+    },
+    {
+      "id": "b777fc63-9d14-4132-a3f1-99108500c781",
+      "publisher": "[人民卫生出版社](https://book.douban.com/press/2776/?order=time)",
+      "bookNumbers": [
+        "7-117"
+      ]
     }
   ],
   "bookNumbers": [
@@ -170,6 +177,7 @@
     "7-113",
     "7-114",
     "7-115",
-    "7-116"
+    "7-116",
+    "7-117"
   ]
 }
