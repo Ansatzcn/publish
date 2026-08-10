@@ -598,6 +598,13 @@
       ]
     },
     {
+      "id": "7b77c676-b220-4cfe-b719-5288be6f2357",
+      "publisher": "[世界知识出版社](https://book.douban.com/press/2344/?order=time)",
+      "bookNumbers": [
+        "7-5012"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -748,6 +755,7 @@
     "7-5009",
     "7-5010",
     "7-5011",
+    "7-5012",
     "7-5095",
     "7-5097",
     "7-5148",
