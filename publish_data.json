@@ -119,6 +119,13 @@
       "bookNumbers": [
         "7-112"
       ]
+    },
+    {
+      "id": "ad93ecca-d68f-4301-8133-b5b8bb67033c",
+      "publisher": "[中国铁道出版社](https://book.douban.com/press/2268/?order=time)",
+      "bookNumbers": [
+        "7-113"
+      ]
     }
   ],
   "bookNumbers": [
@@ -138,6 +145,7 @@
     "7-109",
     "7-110",
     "7-111",
-    "7-112"
+    "7-112",
+    "7-113"
   ]
 }
