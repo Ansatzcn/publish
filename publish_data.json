@@ -212,6 +212,13 @@
       ]
     },
     {
+      "id": "a424bb42-7a9c-469c-9156-5f01ecaeca38",
+      "publisher": "[内蒙古人民出版社](https://book.douban.com/press/2790/?order=time)",
+      "bookNumbers": [
+        "7-204"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -254,6 +261,7 @@
     "7-200",
     "7-201",
     "7-202",
-    "7-203"
+    "7-203",
+    "7-204"
   ]
 }
