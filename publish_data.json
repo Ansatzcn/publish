@@ -156,6 +156,13 @@
       ]
     },
     {
+      "id": "109be841-1bd0-4114-8313-226d36c68af2",
+      "publisher": "[国防工业出版社](https://book.douban.com/press/2226/?order=time)",
+      "bookNumbers": [
+        "7-118"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -190,6 +197,7 @@
     "7-117",
     "7-5201",
     "7-5228",
-    "7-5097"
+    "7-5097",
+    "7-118"
   ]
 }
