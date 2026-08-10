@@ -296,6 +296,13 @@
       ]
     },
     {
+      "id": "63c7661c-4052-4058-aa6a-eafb219073f6",
+      "publisher": "[湖北人民出版社](https://book.douban.com/press/2735/?order=time)",
+      "bookNumbers": [
+        "7-216"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -398,6 +405,7 @@
     "7-212",
     "7-213",
     "7-214",
-    "7-215"
+    "7-215",
+    "7-216"
   ]
 }
