@@ -240,6 +240,13 @@
       ]
     },
     {
+      "id": "3eed51f5-2211-4631-9819-6c2127bb050f",
+      "publisher": "[上海人民出版社](https://book.douban.com/press/2733/?order=time)",
+      "bookNumbers": [
+        "7-208"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -286,6 +293,7 @@
     "7-204",
     "7-205",
     "7-206",
-    "7-207"
+    "7-207",
+    "7-208"
   ]
 }
