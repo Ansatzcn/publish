@@ -14,10 +14,18 @@
       "bookNumbers": [
         "7-02"
       ]
+    },
+    {
+      "id": "b935758f-1bf3-4090-8381-0e67624fb42b",
+      "publisher": "[科学出版社](https://book.douban.com/press/2633/?order=time)",
+      "bookNumbers": [
+        "7-03"
+      ]
     }
   ],
   "bookNumbers": [
     "7-01",
-    "7-02"
+    "7-02",
+    "7-03"
   ]
 }
