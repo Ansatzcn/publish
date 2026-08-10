@@ -165,6 +165,7 @@ function attr(v){return esc(v).replace(/"/g,'&quot;')}
 function uid(){return crypto?.randomUUID?crypto.randomUUID():`pub_${Date.now()}_${Math.random().toString(36).slice(2,9)}`}
 function key(v){return clean(v).toLocaleLowerCase('zh-CN')}
 function uniq(values){const m=new Map();for(const raw of values||[]){const v=clean(raw);if(v&&!m.has(key(v)))m.set(key(v),v)}return [...m.values()]}
+function sortBookNumbers(values){return uniq(values).sort((a,b)=>collator.compare(clean(a),clean(b)))}
 function parsePublisher(v){
     const s=clean(v),m=s.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/i);
     return m?{raw:s,text:m[1].trim(),url:m[2].trim()}:null
@@ -172,7 +173,7 @@ function parsePublisher(v){
 function normEntry(x){
     if(!x||typeof x!=='object')return null;
     const publisher=clean(x.publisher);if(!parsePublisher(publisher))return null;
-    return{id:clean(x.id)||uid(),publisher,bookNumbers:uniq(Array.isArray(x.bookNumbers)?x.bookNumbers:[])};
+    return{id:clean(x.id)||uid(),publisher,bookNumbers:sortBookNumbers(Array.isArray(x.bookNumbers)?x.bookNumbers:[])};
 }
 function norm(v){
     const s=Array.isArray(v)?{entries:v}:(v&&typeof v==='object'?v:{});
@@ -183,7 +184,7 @@ function norm(v){
         const by=collator.compare(aa,bb);if(by!==0)return by;
         return collator.compare(parsePublisher(a.publisher)?.text||a.publisher,parsePublisher(b.publisher)?.text||b.publisher)
     });
-    const history=Array.isArray(s.bookNumbers)?uniq(s.bookNumbers):uniq(entries.flatMap(x=>x.bookNumbers));
+    const history=Array.isArray(s.bookNumbers)?sortBookNumbers(s.bookNumbers):sortBookNumbers(entries.flatMap(x=>x.bookNumbers));
     return{schemaVersion:1,entries,bookNumbers:history}
 }
 function fingerprint(v=state){return JSON.stringify(norm(v))}
@@ -238,7 +239,7 @@ function removeAdditional(which,value){
     const i=arr.findIndex(x=>key(x)===key(value));if(i>=0)arr.splice(i,1);
     renderMulti(which)
 }
-function addHistory(v){v=clean(v);if(v&&!state.bookNumbers.some(x=>key(x)===key(v)))state.bookNumbers.push(v)}
+function addHistory(v){v=clean(v);if(v&&!state.bookNumbers.some(x=>key(x)===key(v))){state.bookNumbers.push(v);state.bookNumbers=sortBookNumbers(state.bookNumbers)}}
 function openNewBook(which){
     const primary=clean((which==='add'?bookPrimaryInput:editBookPrimaryInput).value);
     if(!primary){show('请先填写第一个书号','error');(which==='add'?bookPrimaryInput:editBookPrimaryInput).focus();return}
