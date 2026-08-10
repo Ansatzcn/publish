@@ -247,6 +247,13 @@
       ]
     },
     {
+      "id": "3c84fdfa-c299-4859-be25-aa2649d37c61",
+      "publisher": "[山东人民出版社](https://book.douban.com/press/2263/?order=time)",
+      "bookNumbers": [
+        "7-209"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -342,6 +349,7 @@
     "7-5501",
     "7-5505",
     "7-5519",
-    "7-5520"
+    "7-5520",
+    "7-209"
   ]
 }
