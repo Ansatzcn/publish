@@ -56,6 +56,13 @@
       "bookNumbers": [
         "7-103"
       ]
+    },
+    {
+      "id": "9a1dec49-44eb-4a47-b7cb-6464e0b4caa7",
+      "publisher": "[中国戏剧出版社](https://book.douban.com/press/2699/?order=time)",
+      "bookNumbers": [
+        "7-104"
+      ]
     }
   ],
   "bookNumbers": [
@@ -66,6 +73,7 @@
     "7-100",
     "7-101",
     "7-102",
-    "7-103"
+    "7-103",
+    "7-104"
   ]
 }
