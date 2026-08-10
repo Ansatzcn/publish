@@ -268,6 +268,13 @@
       "bookNumbers": [
         "7-5500"
       ]
+    },
+    {
+      "id": "8ce54ebd-394b-4ec8-a60d-feb071be6c54",
+      "publisher": "[南方出版社](https://book.douban.com/press/2315/?order=time)",
+      "bookNumbers": [
+        "7-5501"
+      ]
     }
   ],
   "bookNumbers": [
@@ -310,6 +317,7 @@
     "7-207",
     "7-208",
     "7-5496",
-    "7-5500"
+    "7-5500",
+    "7-5501"
   ]
 }
