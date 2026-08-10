@@ -198,6 +198,13 @@
       ]
     },
     {
+      "id": "eef41bc7-1f74-45a2-ab88-e9c2fb656c93",
+      "publisher": "[河北人民出版社](https://book.douban.com/press/2209/?order=time)",
+      "bookNumbers": [
+        "7-202"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -238,6 +245,7 @@
     "7-121",
     "7-122",
     "7-200",
-    "7-201"
+    "7-201",
+    "7-202"
   ]
 }
