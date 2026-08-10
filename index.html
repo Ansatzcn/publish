@@ -740,7 +740,16 @@ publisherInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefau
 bookPrimaryInput.addEventListener('keydown',e=>{
     if(e.key==='Enter'){
         e.preventDefault();
-        commitBook('add');
+
+        // 有正在输入的书号：先把它确认成标签。
+        if(clean(bookPrimaryInput.value)){
+            commitBook('add');
+            return;
+        }
+
+        // 输入框已经为空、焦点仍停留在书号栏：
+        // 再按一次 Enter，等同点击“添加”按钮。
+        addEntry();
     }
 });
 editBookPrimaryInput.addEventListener('keydown',e=>{
