@@ -520,6 +520,13 @@
       ]
     },
     {
+      "id": "faad9b2f-38ee-46ca-8b73-ff758c19efcb",
+      "publisher": "[中国盲文出版社](https://book.douban.com/press/2235/?order=time)",
+      "bookNumbers": [
+        "7-5002"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -660,6 +667,7 @@
     "7-313",
     "7-5000",
     "7-5001",
+    "7-5002",
     "7-5097",
     "7-5201",
     "7-5202",
