@@ -619,17 +619,17 @@
       ]
     },
     {
-      "id": "63e7daa2-e9b9-43f7-897b-fcbf772d1cee",
-      "publisher": "[天天出版社](https://book.douban.com/press/2784/?order=time)",
+      "id": "1a9e682d-2cac-4016-a971-13c6ea0b0b29",
+      "publisher": "[知识出版社](https://book.douban.com/press/2613/?order=time)",
       "bookNumbers": [
         "7-5015"
       ]
     },
     {
-      "id": "1a9e682d-2cac-4016-a971-13c6ea0b0b29",
-      "publisher": "[知识出版社](https://book.douban.com/press/2613/?order=time)",
+      "id": "63e7daa2-e9b9-43f7-897b-fcbf772d1cee",
+      "publisher": "[天天出版社](https://book.douban.com/press/2784/?order=time)",
       "bookNumbers": [
-        "7-5015"
+        "7-5016"
       ]
     },
     {
@@ -787,6 +787,7 @@
     "7-5013",
     "7-5014",
     "7-5015",
+    "7-5016",
     "7-5095",
     "7-5097",
     "7-5148",
