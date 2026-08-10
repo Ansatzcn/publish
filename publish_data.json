@@ -233,6 +233,13 @@
       ]
     },
     {
+      "id": "8202ca5f-21dc-44a3-ad4b-e54495c13d3c",
+      "publisher": "[黑龙江人民出版社](https://book.douban.com/press/2465/?order=time)",
+      "bookNumbers": [
+        "7-207"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -278,6 +285,7 @@
     "7-203",
     "7-204",
     "7-205",
-    "7-206"
+    "7-206",
+    "7-207"
   ]
 }
