@@ -205,6 +205,13 @@
       ]
     },
     {
+      "id": "9388a947-eb4a-423a-a097-858bf6779fb9",
+      "publisher": "[山西人民出版社](https://book.douban.com/press/2803/?order=time)",
+      "bookNumbers": [
+        "7-203"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -246,6 +253,7 @@
     "7-122",
     "7-200",
     "7-201",
-    "7-202"
+    "7-202",
+    "7-203"
   ]
 }
