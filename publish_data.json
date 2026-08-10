@@ -605,6 +605,13 @@
       ]
     },
     {
+      "id": "f7ae4bde-5a12-4ded-9da7-2b7bf16ef919",
+      "publisher": "[国家图书馆出版社](https://book.douban.com/press/2431/?order=time)",
+      "bookNumbers": [
+        "7-5013"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -756,6 +763,7 @@
     "7-5010",
     "7-5011",
     "7-5012",
+    "7-5013",
     "7-5095",
     "7-5097",
     "7-5148",
