@@ -84,6 +84,13 @@
       "bookNumbers": [
         "7-107"
       ]
+    },
+    {
+      "id": "89a7d9f6-fb74-4d97-89a9-81182d580c62",
+      "publisher": "[生活·读书·新知三联书店](https://book.douban.com/press/2158/?order=time)",
+      "bookNumbers": [
+        "7-108"
+      ]
     }
   ],
   "bookNumbers": [
@@ -98,6 +105,7 @@
     "7-104",
     "7-105",
     "7-106",
-    "7-107"
+    "7-107",
+    "7-108"
   ]
 }
