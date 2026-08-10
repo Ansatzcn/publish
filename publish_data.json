@@ -21,11 +21,19 @@
       "bookNumbers": [
         "7-03"
       ]
+    },
+    {
+      "id": "31193941-596e-4d9b-bcfe-5c34fcc5171f",
+      "publisher": "[高等教育出版社](https://book.douban.com/press/2549/?order=time)",
+      "bookNumbers": [
+        "7-04"
+      ]
     }
   ],
   "bookNumbers": [
     "7-01",
     "7-02",
-    "7-03"
+    "7-03",
+    "7-04"
   ]
 }
