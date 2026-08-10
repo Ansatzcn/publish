@@ -749,7 +749,11 @@ bookPrimaryInput.addEventListener('keydown',e=>{
 
         // 输入框已经为空、焦点仍停留在书号栏：
         // 再按一次 Enter，等同点击“添加”按钮。
+        // 添加完成后收起书号下拉，并把焦点切回“机构”，方便继续录入下一条。
+        bookPanel.classList.add('hidden');
+        editBookPanel.classList.add('hidden');
         addEntry();
+        publisherInput.focus();
     }
 });
 editBookPrimaryInput.addEventListener('keydown',e=>{
