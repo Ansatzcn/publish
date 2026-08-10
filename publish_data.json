@@ -49,6 +49,13 @@
       "bookNumbers": [
         "7-102"
       ]
+    },
+    {
+      "id": "7a69d066-5ef8-49b7-a56f-c377b61f689b",
+      "publisher": "[人民音乐出版社](https://book.douban.com/press/2660/?order=time)",
+      "bookNumbers": [
+        "7-103"
+      ]
     }
   ],
   "bookNumbers": [
@@ -58,6 +65,7 @@
     "7-04",
     "7-100",
     "7-101",
-    "7-102"
+    "7-102",
+    "7-103"
   ]
 }
