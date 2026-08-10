@@ -340,6 +340,13 @@
       ]
     },
     {
+      "id": "3a1ff0e3-214f-4200-856b-761c8b5c7285",
+      "publisher": "[云南人民出版社](https://book.douban.com/press/2398/?order=time)",
+      "bookNumbers": [
+        "7-222"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -440,6 +447,7 @@
     "7-219",
     "7-220",
     "7-221",
+    "7-222",
     "7-5097",
     "7-5201",
     "7-5228",
