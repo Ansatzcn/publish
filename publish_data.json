@@ -1,5 +1,15 @@
 {
   "schemaVersion": 1,
-  "entries": [],
-  "bookNumbers": []
+  "entries": [
+    {
+      "id": "9f0b81a5-718b-46f7-9206-bafe359faa1f",
+      "publisher": "[人民出版社](https://book.douban.com/press/2291/?order=time)",
+      "bookNumbers": [
+        "7-01"
+      ]
+    }
+  ],
+  "bookNumbers": [
+    "7-01"
+  ]
 }
