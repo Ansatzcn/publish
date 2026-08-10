@@ -35,6 +35,13 @@
       "bookNumbers": [
         "7-100"
       ]
+    },
+    {
+      "id": "b037de5d-becd-4401-9769-ed97e3897f7f",
+      "publisher": "[中华书局](https://book.douban.com/press/2838/?order=time)",
+      "bookNumbers": [
+        "7-101"
+      ]
     }
   ],
   "bookNumbers": [
@@ -42,6 +49,7 @@
     "7-02",
     "7-03",
     "7-04",
-    "7-100"
+    "7-100",
+    "7-101"
   ]
 }
