@@ -77,6 +77,13 @@
       "bookNumbers": [
         "7-106"
       ]
+    },
+    {
+      "id": "c2e73892-6d77-4249-9ee6-2ee69733fa31",
+      "publisher": "[人民教育出版社](https://book.douban.com/press/2748/?order=time)",
+      "bookNumbers": [
+        "7-107"
+      ]
     }
   ],
   "bookNumbers": [
@@ -90,6 +97,7 @@
     "7-103",
     "7-104",
     "7-105",
-    "7-106"
+    "7-106",
+    "7-107"
   ]
 }
