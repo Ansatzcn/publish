@@ -112,6 +112,13 @@
       "bookNumbers": [
         "7-111"
       ]
+    },
+    {
+      "id": "f19fd8e9-92af-4d13-9e1a-f3ee45b3c8d5",
+      "publisher": "[中国建筑工业出版社](https://book.douban.com/press/2281/?order=time)",
+      "bookNumbers": [
+        "7-112"
+      ]
     }
   ],
   "bookNumbers": [
@@ -130,6 +137,7 @@
     "7-108",
     "7-109",
     "7-110",
-    "7-111"
+    "7-111",
+    "7-112"
   ]
 }
