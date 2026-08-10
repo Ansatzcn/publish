@@ -477,6 +477,13 @@
       ]
     },
     {
+      "id": "2a00568b-2259-453a-b7e5-3ab10bed1edb",
+      "publisher": "[南开大学出版社](https://book.douban.com/press/2439/?order=time)",
+      "bookNumbers": [
+        "7-310"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -611,6 +618,7 @@
     "7-307",
     "7-308",
     "7-309",
+    "7-310",
     "7-5097",
     "7-5201",
     "7-5228",
