@@ -28,12 +28,20 @@
       "bookNumbers": [
         "7-04"
       ]
+    },
+    {
+      "id": "d4027234-d5ef-4caa-b0a6-ee8ad22468c7",
+      "publisher": "[商务印书馆](https://book.douban.com/press/2851/?order=time)",
+      "bookNumbers": [
+        "7-100"
+      ]
     }
   ],
   "bookNumbers": [
     "7-01",
     "7-02",
     "7-03",
-    "7-04"
+    "7-04",
+    "7-100"
   ]
 }
