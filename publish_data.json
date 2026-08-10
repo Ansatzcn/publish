@@ -442,6 +442,13 @@
       ]
     },
     {
+      "id": "fbe9c42d-9e81-4084-b1c1-8708686a2acb",
+      "publisher": "[中山大学出版社](https://book.douban.com/press/2453/?order=time)",
+      "bookNumbers": [
+        "7-306"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -571,6 +578,7 @@
     "7-303",
     "7-304",
     "7-305",
+    "7-306",
     "7-5097",
     "7-5201",
     "7-5228",
