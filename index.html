@@ -18,10 +18,10 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 .form-grid{display:grid;grid-template-columns:1fr;gap:1rem}.form-group{display:flex;flex-direction:column;gap:5px}.form-group label{color:#475569;font-size:.78rem;font-weight:700;letter-spacing:.04em}.required{color:#dc2626}
 .form-group input,.form-group select{width:100%;min-height:44px;padding:.72rem 1rem;border:1px solid #cbd5e1;border-radius:15px;background:#fff;color:#0f172a;outline:none}.form-group input:focus,.form-group select:focus{outline:2px solid #93b4ff;outline-offset:1px;border-color:transparent}
 .add-button{min-height:46px;border:0;border-radius:999px;background:#1e293b;color:#fff;font-weight:700}.add-button:hover{background:#0f172a}
-.multi-select{position:relative}.multi-trigger{width:100%;min-height:44px;padding:.72rem 1rem;border:1px solid #cbd5e1;border-radius:15px;background:#fff;color:#0f172a;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px}.multi-trigger::after{content:"▾";color:#64748b}.multi-panel{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:650;max-height:280px;overflow-y:auto;padding:.55rem;border:1px solid #cbd5e1;border-radius:15px;background:#fff;box-shadow:0 15px 30px rgba(15,23,42,.14)}.multi-option{display:flex;align-items:center;gap:9px;padding:.55rem .6rem;border-radius:10px;color:#0f172a}.multi-option:hover{background:#f1f5f9}.multi-option input{width:auto;min-height:auto}.multi-actions{display:flex;gap:7px;margin-top:.45rem;padding-top:.55rem;border-top:1px solid #e2e8f0}.multi-action{flex:1;padding:.48rem .6rem;border:0;border-radius:10px;background:#f1f5f9;color:#334155;font-size:.82rem;font-weight:650}.multi-empty{padding:.6rem;color:#94a3b8;text-align:center;font-size:.82rem}
+.book-combo{position:relative}.book-primary-row{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:7px}.book-primary-row input{width:100%;min-height:44px;padding:.72rem 1rem;border:1px solid #cbd5e1;border-radius:15px;background:#fff;color:#0f172a;outline:none}.book-primary-row input:focus{outline:2px solid #93b4ff;outline-offset:1px;border-color:transparent}.book-history-toggle{min-height:44px;border:1px solid #cbd5e1;border-radius:15px;background:#fff;color:#475569;font-weight:700}.book-history-toggle:hover{background:#f1f5f9}.multi-panel{position:absolute;left:0;right:0;top:calc(44px + 7px);z-index:650;max-height:280px;overflow-y:auto;padding:.55rem;border:1px solid #cbd5e1;border-radius:15px;background:#fff;box-shadow:0 15px 30px rgba(15,23,42,.14)}.multi-option{display:block;width:100%;padding:.55rem .65rem;border:0;border-radius:10px;background:#fff;color:#0f172a;text-align:left}.multi-option:hover{background:#f1f5f9}.multi-actions{display:flex;gap:7px;margin-top:.45rem;padding-top:.55rem;border-top:1px solid #e2e8f0}.multi-action{flex:1;padding:.48rem .6rem;border:0;border-radius:10px;background:#f1f5f9;color:#334155;font-size:.82rem;font-weight:650}.multi-action:disabled{opacity:.42;cursor:not-allowed}.multi-empty{padding:.6rem;color:#94a3b8;text-align:center;font-size:.82rem}.selected-books{display:flex;flex-wrap:wrap;gap:7px;margin-top:.55rem}.selected-book{display:inline-flex;align-items:center;gap:7px;padding:.38rem .65rem;border-radius:999px;background:#eef2f7;color:#0f172a;font-size:.84rem}.selected-book-remove{border:0;background:transparent;color:#64748b;font-size:.95rem;line-height:1;padding:0}.selected-book-remove:hover{color:#dc2626}
 .list-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:.8rem}.count-badge{min-width:38px;padding:.22rem .8rem;border-radius:999px;background:#e8edf4;text-align:center;font-size:.8rem;font-weight:650}
 .publish-list{border:1px solid #e2e8f0;border-radius:20px;overflow:hidden;background:#fff}.publish-item{padding:1rem 1.15rem;background:#fff}.publish-item+.publish-item{border-top:2px solid #dbe3ed}.publish-item:hover{background:#fafcff}
-.publish-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.publisher{font-size:1rem;font-weight:700;line-height:1.5}.publisher a{color:#0f172a;text-decoration:none}.publisher a:hover{text-decoration:underline}.book-numbers{margin-top:.3rem;color:#000;font-size:.92rem;line-height:1.6}.book-number{display:block;color:#000;overflow-wrap:anywhere}
+.publish-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}.publisher{font-size:1rem;font-weight:700;line-height:1.5}.publisher a{color:#2563eb;text-decoration:none}.publisher a:hover{color:#1d4ed8;text-decoration:underline}.book-numbers{margin-top:.3rem;color:#000;font-size:.92rem;line-height:1.6}.book-number{display:block;color:#000;overflow-wrap:anywhere}
 .item-actions{display:flex;gap:6px}.action-btn{padding:.28rem .72rem;border:0;border-radius:999px;font-size:.82rem;font-weight:650}.edit-btn{background:#dbeafe;color:#1e3a8a}.delete-btn{background:#fee2e2;color:#991b1b}.empty-state{padding:2.6rem 1rem;background:#fafcff;color:#94a3b8;text-align:center}
 .overlay{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));background:rgba(15,23,42,.45);backdrop-filter:blur(5px)}
 .dialog{width:min(100%,580px);max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));display:flex;flex-direction:column;overflow:hidden;background:#fff;border-radius:26px;box-shadow:0 30px 70px rgba(15,23,42,.28)}.dialog-scroll{min-height:0;overflow-y:auto;scrollbar-gutter:stable;padding:1.7rem 1.7rem 1rem}.dialog h3{margin-bottom:.4rem;font-size:1.3rem}.dialog-desc{margin-bottom:1rem;padding-bottom:.8rem;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:.86rem;line-height:1.55}.dialog .form-group{margin-bottom:.95rem}.dialog-actions{display:flex;justify-content:flex-end;gap:9px;padding:.95rem 1.7rem max(.95rem,env(safe-area-inset-bottom));border-top:1px solid #e8edf4;background:#fff}
@@ -51,13 +51,16 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <h2>添加</h2>
 <div class="form-grid">
 <div class="form-group">
-<label for="publisherInput">出版社 <span class="required">*</span></label>
-<input type="text" id="publisherInput" autocomplete="off">
+<label for="publisherInput">机构</label>
+<input type="text" id="publisherInput" autocomplete="off" autofocus>
 </div>
 <div class="form-group">
-<label>书号</label>
-<div class="multi-select" id="bookMulti">
-<button class="multi-trigger" id="bookTrigger" type="button">请选择书号（可多选）</button>
+<label for="bookPrimaryInput">书号</label>
+<div class="book-combo" id="bookMulti">
+<div class="book-primary-row">
+<input type="text" id="bookPrimaryInput" autocomplete="off">
+<button class="book-history-toggle" id="bookTrigger" type="button" aria-label="展开书号历史">▾</button>
+</div>
 <div class="multi-panel hidden" id="bookPanel">
 <div id="bookOptions"></div>
 <div class="multi-actions">
@@ -65,6 +68,7 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <button class="multi-action" id="bookManage" type="button">管理书号历史…</button>
 </div>
 </div>
+<div class="selected-books" id="bookSelectedList"></div>
 </div>
 </div>
 <button class="add-button" id="addBtn" type="button">添加</button>
@@ -81,11 +85,14 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <div class="dialog">
 <div class="dialog-scroll">
 <h3>编辑</h3>
-<div class="form-group"><label for="editPublisher">出版社 <span class="required">*</span></label><input type="text" id="editPublisher" autocomplete="off"></div>
+<div class="form-group"><label for="editPublisher">机构</label><input type="text" id="editPublisher" autocomplete="off"></div>
 <div class="form-group">
-<label>书号</label>
-<div class="multi-select" id="editBookMulti">
-<button class="multi-trigger" id="editBookTrigger" type="button">请选择书号（可多选）</button>
+<label for="editBookPrimaryInput">书号</label>
+<div class="book-combo" id="editBookMulti">
+<div class="book-primary-row">
+<input type="text" id="editBookPrimaryInput" autocomplete="off">
+<button class="book-history-toggle" id="editBookTrigger" type="button" aria-label="展开书号历史">▾</button>
+</div>
 <div class="multi-panel hidden" id="editBookPanel">
 <div id="editBookOptions"></div>
 <div class="multi-actions">
@@ -93,6 +100,7 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <button class="multi-action" id="editBookManage" type="button">管理书号历史…</button>
 </div>
 </div>
+<div class="selected-books" id="editBookSelectedList"></div>
 </div>
 </div>
 </div>
@@ -141,8 +149,8 @@ const STATE_KEY=`${NS}:state`,CONFIG_KEY=`${NS}:config`,TOKEN_LOCAL=`${NS}:token
 const MAX_BYTES=750*1024,AUTO_DELAY=700;
 const $=id=>document.getElementById(id);
 const statusDot=$('statusDot'),statusText=$('statusText'),syncBtn=$('syncBtn'),configBtn=$('configBtn'),exportBtn=$('exportBtn'),importBtn=$('importBtn'),fileInput=$('fileInput'),lastSyncTime=$('lastSyncTime'),
-addSection=$('addSection'),publisherInput=$('publisherInput'),bookMulti=$('bookMulti'),bookTrigger=$('bookTrigger'),bookPanel=$('bookPanel'),bookOptions=$('bookOptions'),bookAddNew=$('bookAddNew'),bookManage=$('bookManage'),addBtn=$('addBtn'),
-publishList=$('publishList'),countDisplay=$('countDisplay'),editModal=$('editModal'),editPublisher=$('editPublisher'),editBookMulti=$('editBookMulti'),editBookTrigger=$('editBookTrigger'),editBookPanel=$('editBookPanel'),editBookOptions=$('editBookOptions'),editBookAddNew=$('editBookAddNew'),editBookManage=$('editBookManage'),editCancel=$('editCancel'),editSave=$('editSave'),
+addSection=$('addSection'),publisherInput=$('publisherInput'),bookMulti=$('bookMulti'),bookPrimaryInput=$('bookPrimaryInput'),bookTrigger=$('bookTrigger'),bookPanel=$('bookPanel'),bookOptions=$('bookOptions'),bookSelectedList=$('bookSelectedList'),bookAddNew=$('bookAddNew'),bookManage=$('bookManage'),addBtn=$('addBtn'),
+publishList=$('publishList'),countDisplay=$('countDisplay'),editModal=$('editModal'),editPublisher=$('editPublisher'),editBookMulti=$('editBookMulti'),editBookPrimaryInput=$('editBookPrimaryInput'),editBookTrigger=$('editBookTrigger'),editBookPanel=$('editBookPanel'),editBookOptions=$('editBookOptions'),editBookSelectedList=$('editBookSelectedList'),editBookAddNew=$('editBookAddNew'),editBookManage=$('editBookManage'),editCancel=$('editCancel'),editSave=$('editSave'),
 newBookModal=$('newBookModal'),newBookInput=$('newBookInput'),newBookCancel=$('newBookCancel'),newBookSave=$('newBookSave'),bookManagerModal=$('bookManagerModal'),bookHistoryList=$('bookHistoryList'),bookManagerClose=$('bookManagerClose'),
 configModal=$('configModal'),configForm=$('configForm'),cfgOwner=$('cfgOwner'),cfgRepo=$('cfgRepo'),cfgFile=$('cfgFile'),cfgToken=$('cfgToken'),rememberToken=$('rememberToken'),configCancel=$('configCancel'),backToTopBtn=$('backToTopBtn'),toast=$('toast');
 
@@ -193,14 +201,16 @@ function show(msg,type='info'){toast.textContent=msg;toast.className=`toast ${ty
 function status(kind,text){statusDot.className=`status-dot ${kind}`;statusText.textContent=text}
 function saveLocal(){state=norm(state);ls(STATE_KEY,JSON.stringify(state))}
 function loadLocal(){const s=lg(STATE_KEY);if(!s)return null;try{return norm(JSON.parse(s))}catch(e){return null}}
-function updateAdmin(){const on=admin();addSection.classList.toggle('hidden',!on);syncBtn.classList.toggle('hidden',!on);importBtn.classList.toggle('hidden',!on)}
+function updateAdmin(){const on=admin(),wasHidden=addSection.classList.contains('hidden');addSection.classList.toggle('hidden',!on);syncBtn.classList.toggle('hidden',!on);importBtn.classList.toggle('hidden',!on);if(on&&wasHidden)setTimeout(()=>publisherInput.focus(),40)}
 function displayPublisher(raw){const p=parsePublisher(raw);return p?`<a href="${attr(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.text)}</a>`:esc(raw)}
 
 function renderMulti(which){
-    const isAdd=which==='add',optionsEl=isAdd?bookOptions:editBookOptions,trigger=isAdd?bookTrigger:editBookTrigger,selected=isAdd?addSelected:editSelected;
-    const all=uniq([...state.bookNumbers,...selected]);
-    optionsEl.innerHTML=all.length?all.map(v=>`<label class="multi-option"><input type="checkbox" value="${attr(v)}" ${selected.some(x=>key(x)===key(v))?'checked':''}><span>${esc(v)}</span></label>`).join(''):'<div class="multi-empty">暂无书号</div>';
-    trigger.textContent=selected.length?selected.join('；'):'请选择书号（可多选）'
+    const isAdd=which==='add',optionsEl=isAdd?bookOptions:editBookOptions,selectedList=isAdd?bookSelectedList:editBookSelectedList,primaryInput=isAdd?bookPrimaryInput:editBookPrimaryInput,selected=isAdd?addSelected:editSelected,addNewBtn=isAdd?bookAddNew:editBookAddNew;
+    const primary=clean(primaryInput.value);
+    const history=state.bookNumbers.filter(v=>key(v)!==key(primary)&&!selected.some(x=>key(x)===key(v)));
+    optionsEl.innerHTML=history.length?history.map(v=>`<button class="multi-option" type="button" data-value="${attr(v)}">${esc(v)}</button>`).join(''):'<div class="multi-empty">暂无其它书号</div>';
+    selectedList.innerHTML=selected.map(v=>`<span class="selected-book">${esc(v)}<button class="selected-book-remove" type="button" data-value="${attr(v)}" aria-label="删除书号">×</button></span>`).join('');
+    addNewBtn.disabled=!primary
 }
 function renderManager(){
     bookHistoryList.innerHTML=state.bookNumbers.length?state.bookNumbers.map(v=>`<div class="history-row" data-old="${attr(v)}"><input type="text" value="${attr(v)}"><button class="history-btn history-save" type="button">保存</button><button class="history-btn history-delete" type="button">删除</button></div>`).join(''):'<div class="history-empty">暂无已保存的书号</div>'
@@ -216,16 +226,28 @@ function render(){
 }
 function togglePanel(panel){panel.classList.toggle('hidden')}
 function closePanels(){bookPanel.classList.add('hidden');editBookPanel.classList.add('hidden')}
-function changeSelection(which,value,checked){
+function choosePrimary(which,value){
+    const input=which==='add'?bookPrimaryInput:editBookPrimaryInput;
+    input.value=clean(value);
+    (which==='add'?bookPanel:editBookPanel).classList.add('hidden');
+    renderMulti(which);
+    input.focus()
+}
+function removeAdditional(which,value){
     const arr=which==='add'?addSelected:editSelected;
-    const i=arr.findIndex(x=>key(x)===key(value));
-    if(checked&&i<0)arr.push(value);if(!checked&&i>=0)arr.splice(i,1);
+    const i=arr.findIndex(x=>key(x)===key(value));if(i>=0)arr.splice(i,1);
     renderMulti(which)
 }
 function addHistory(v){v=clean(v);if(v&&!state.bookNumbers.some(x=>key(x)===key(v)))state.bookNumbers.push(v)}
-function openNewBook(which){newBookTarget=which;newBookInput.value='';newBookModal.classList.remove('hidden');setTimeout(()=>newBookInput.focus(),30)}
+function openNewBook(which){
+    const primary=clean((which==='add'?bookPrimaryInput:editBookPrimaryInput).value);
+    if(!primary){show('请先填写第一个书号','error');(which==='add'?bookPrimaryInput:editBookPrimaryInput).focus();return}
+    newBookTarget=which;newBookInput.value='';newBookModal.classList.remove('hidden');setTimeout(()=>newBookInput.focus(),30)
+}
 function saveNewBook(){
     const v=clean(newBookInput.value);if(!v){show('请输入书号','error');return}
+    const primary=clean((newBookTarget==='add'?bookPrimaryInput:editBookPrimaryInput).value);
+    if(key(v)===key(primary)){show('该书号已经是第一个书号','error');return}
     addHistory(v);
     const arr=newBookTarget==='add'?addSelected:editSelected;if(!arr.some(x=>key(x)===key(v)))arr.push(v);
     newBookModal.classList.add('hidden');renderMulti('add');renderMulti('edit');saveLocal();schedule();show('已添加书号','success')
@@ -236,6 +258,8 @@ function renameHistory(oldValue,newValue){
     if(state.bookNumbers.some(x=>key(x)===key(neu)&&key(x)!==key(old))){show('该书号已存在','error');return false}
     state.bookNumbers=uniq(state.bookNumbers.map(x=>key(x)===key(old)?neu:x));
     for(const e of state.entries)e.bookNumbers=uniq(e.bookNumbers.map(x=>key(x)===key(old)?neu:x));
+    if(key(bookPrimaryInput.value)===key(old))bookPrimaryInput.value=neu;
+    if(key(editBookPrimaryInput.value)===key(old))editBookPrimaryInput.value=neu;
     addSelected=uniq(addSelected.map(x=>key(x)===key(old)?neu:x));editSelected=uniq(editSelected.map(x=>key(x)===key(old)?neu:x));
     render();renderManager();schedule();show('已更新书号','success');return true
 }
@@ -246,18 +270,21 @@ function deleteHistory(v){
 
 function addEntry(){
     if(!admin())return;const parsed=parsePublisher(publisherInput.value);
-    if(!parsed){show('出版社必须使用 [文字](链接) 格式','error');publisherInput.focus();return}
-    state.entries.push({id:uid(),publisher:parsed.raw,bookNumbers:[...addSelected]});
-    publisherInput.value='';addSelected=[];render();schedule();publisherInput.focus();show('已添加','success')
+    if(!parsed){show('机构必须使用 [文字](链接) 格式','error');publisherInput.focus();return}
+    const primary=clean(bookPrimaryInput.value),books=uniq([primary,...addSelected].filter(Boolean));
+    if(primary)addHistory(primary);
+    state.entries.push({id:uid(),publisher:parsed.raw,bookNumbers:books});
+    publisherInput.value='';bookPrimaryInput.value='';addSelected=[];render();schedule();publisherInput.focus();show('已添加','success')
 }
 function openEdit(id){
     if(!admin())return;const x=state.entries.find(e=>e.id===id);if(!x)return;
-    editingId=id;editPublisher.value=x.publisher;editSelected=[...x.bookNumbers];renderMulti('edit');editModal.classList.remove('hidden');setTimeout(()=>editPublisher.focus(),30)
+    editingId=id;editPublisher.value=x.publisher;editBookPrimaryInput.value=x.bookNumbers[0]||'';editSelected=x.bookNumbers.slice(1);renderMulti('edit');editModal.classList.remove('hidden');setTimeout(()=>editPublisher.focus(),30)
 }
 function saveEdit(){
     const x=state.entries.find(e=>e.id===editingId);if(!x)return;
-    const parsed=parsePublisher(editPublisher.value);if(!parsed){show('出版社必须使用 [文字](链接) 格式','error');editPublisher.focus();return}
-    x.publisher=parsed.raw;x.bookNumbers=[...editSelected];editModal.classList.add('hidden');editingId='';render();schedule();show('已保存','success')
+    const parsed=parsePublisher(editPublisher.value);if(!parsed){show('机构必须使用 [文字](链接) 格式','error');editPublisher.focus();return}
+    const primary=clean(editBookPrimaryInput.value),books=uniq([primary,...editSelected].filter(Boolean));if(primary)addHistory(primary);
+    x.publisher=parsed.raw;x.bookNumbers=books;editModal.classList.add('hidden');editingId='';render();schedule();show('已保存','success')
 }
 function deleteEntry(id){
     const x=state.entries.find(e=>e.id===id);if(!x||!confirm(`确定删除“${parsePublisher(x.publisher)?.text||x.publisher}”吗？`))return;
@@ -331,10 +358,14 @@ async function loadPublic(){
 
 bookTrigger.addEventListener('click',e=>{e.stopPropagation();togglePanel(bookPanel);editBookPanel.classList.add('hidden')});
 editBookTrigger.addEventListener('click',e=>{e.stopPropagation();togglePanel(editBookPanel);bookPanel.classList.add('hidden')});
-bookPanel.addEventListener('change',e=>{if(e.target.matches('input[type="checkbox"]'))changeSelection('add',e.target.value,e.target.checked)});
-editBookPanel.addEventListener('change',e=>{if(e.target.matches('input[type="checkbox"]'))changeSelection('edit',e.target.value,e.target.checked)});
+bookOptions.addEventListener('click',e=>{const b=e.target.closest('.multi-option[data-value]');if(b)choosePrimary('add',b.dataset.value)});
+editBookOptions.addEventListener('click',e=>{const b=e.target.closest('.multi-option[data-value]');if(b)choosePrimary('edit',b.dataset.value)});
+bookSelectedList.addEventListener('click',e=>{const b=e.target.closest('.selected-book-remove');if(b)removeAdditional('add',b.dataset.value)});
+editBookSelectedList.addEventListener('click',e=>{const b=e.target.closest('.selected-book-remove');if(b)removeAdditional('edit',b.dataset.value)});
+bookPrimaryInput.addEventListener('input',()=>renderMulti('add'));
+editBookPrimaryInput.addEventListener('input',()=>renderMulti('edit'));
 bookAddNew.addEventListener('click',()=>openNewBook('add'));editBookAddNew.addEventListener('click',()=>openNewBook('edit'));bookManage.addEventListener('click',openManager);editBookManage.addEventListener('click',openManager);
-newBookCancel.addEventListener('click',()=>newBookModal.classList.add('hidden'));newBookSave.addEventListener('click',saveNewBook);bookManagerClose.addEventListener('click',()=>bookManagerModal.classList.add('hidden'));
+newBookCancel.addEventListener('click',()=>newBookModal.classList.add('hidden'));newBookSave.addEventListener('click',saveNewBook);newBookInput.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();saveNewBook()}});bookManagerClose.addEventListener('click',()=>bookManagerModal.classList.add('hidden'));
 bookHistoryList.addEventListener('click',e=>{const row=e.target.closest('.history-row');if(!row)return;const old=row.dataset.old,input=row.querySelector('input');if(e.target.closest('.history-save'))renameHistory(old,input.value);if(e.target.closest('.history-delete'))deleteHistory(old)});
 addBtn.addEventListener('click',addEntry);publishList.addEventListener('click',e=>{const edit=e.target.closest('.edit-btn');if(edit)return openEdit(edit.dataset.id);const del=e.target.closest('.delete-btn');if(del)deleteEntry(del.dataset.id)});
 editCancel.addEventListener('click',()=>editModal.classList.add('hidden'));editSave.addEventListener('click',saveEdit);
