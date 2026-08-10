@@ -463,6 +463,13 @@
       ]
     },
     {
+      "id": "b2db95f0-1ecb-4fb3-9cf1-b4e099b1ae3c",
+      "publisher": "[浙江大学出版社](https://book.douban.com/press/2574/?order=time)",
+      "bookNumbers": [
+        "7-308"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -595,6 +602,7 @@
     "7-305",
     "7-306",
     "7-307",
+    "7-308",
     "7-5097",
     "7-5201",
     "7-5228",
