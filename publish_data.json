@@ -140,6 +140,13 @@
       "bookNumbers": [
         "7-115"
       ]
+    },
+    {
+      "id": "fbfa8b69-891e-4b23-b697-b94d854be895",
+      "publisher": "[地质出版社](https://book.douban.com/press/2664/?order=time)",
+      "bookNumbers": [
+        "7-116"
+      ]
     }
   ],
   "bookNumbers": [
@@ -162,6 +169,7 @@
     "7-112",
     "7-113",
     "7-114",
-    "7-115"
+    "7-115",
+    "7-116"
   ]
 }
