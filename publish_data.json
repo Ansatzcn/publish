@@ -612,6 +612,13 @@
       ]
     },
     {
+      "id": "14bb35c0-2e6b-4d79-885f-39d49605c647",
+      "publisher": "[群众出版社](https://book.douban.com/press/2202/?order=time)",
+      "bookNumbers": [
+        "7-5014"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -764,6 +771,7 @@
     "7-5011",
     "7-5012",
     "7-5013",
+    "7-5014",
     "7-5095",
     "7-5097",
     "7-5148",
