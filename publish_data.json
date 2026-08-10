@@ -126,6 +126,13 @@
       "bookNumbers": [
         "7-113"
       ]
+    },
+    {
+      "id": "debc9e41-16d9-46f2-807e-99deb5e61d4c",
+      "publisher": "[人民交通出版社](https://book.douban.com/press/2306/?order=time)",
+      "bookNumbers": [
+        "7-114"
+      ]
     }
   ],
   "bookNumbers": [
@@ -146,6 +153,7 @@
     "7-110",
     "7-111",
     "7-112",
-    "7-113"
+    "7-113",
+    "7-114"
   ]
 }
