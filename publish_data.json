@@ -319,6 +319,13 @@
       ]
     },
     {
+      "id": "ec273789-5f10-4e00-ba7f-0db32bdbb36b",
+      "publisher": "[广西人民出版社](https://book.douban.com/press/2541/?order=time)",
+      "bookNumbers": [
+        "7-219"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -416,6 +423,7 @@
     "7-216",
     "7-217",
     "7-218",
+    "7-219",
     "7-5097",
     "7-5201",
     "7-5228",
