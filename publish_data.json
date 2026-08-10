@@ -261,6 +261,13 @@
       "bookNumbers": [
         "7-5496"
       ]
+    },
+    {
+      "id": "53f6ec15-c931-4a18-9fe9-c65fc42dc5d4",
+      "publisher": "[百花洲文艺出版社](https://book.douban.com/press/2124/?order=time)",
+      "bookNumbers": [
+        "7-5500"
+      ]
     }
   ],
   "bookNumbers": [
@@ -302,6 +309,7 @@
     "7-206",
     "7-207",
     "7-208",
-    "7-5496"
+    "7-5496",
+    "7-5500"
   ]
 }
