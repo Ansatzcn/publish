@@ -145,7 +145,7 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 'use strict';
 
 const PUBLIC_FILE='publish_data.json',NS='publish_public_v1';
-const STATE_KEY=`${NS}:state`,CONFIG_KEY=`${NS}:config`,TOKEN_LOCAL=`${NS}:token_local`,TOKEN_SESSION=`${NS}:token_session`,META_KEY=`${NS}:meta`;
+const STATE_KEY=`${NS}:state`,CONFIG_KEY=`${NS}:config`,TOKEN_LOCAL=`${NS}:token_local`,TOKEN_SESSION=`${NS}:token_session`,META_KEY=`${NS}:meta`,BACKUP_KEY=`${NS}:backups`;
 const MAX_BYTES=750*1024,AUTO_DELAY=700;
 const $=id=>document.getElementById(id);
 const statusDot=$('statusDot'),statusText=$('statusText'),syncBtn=$('syncBtn'),configBtn=$('configBtn'),exportBtn=$('exportBtn'),importBtn=$('importBtn'),fileInput=$('fileInput'),lastSyncTime=$('lastSyncTime'),
@@ -156,7 +156,7 @@ configModal=$('configModal'),configForm=$('configForm'),cfgOwner=$('cfgOwner'),c
 
 let state={entries:[],bookNumbers:[]},addSelected=[],editSelected=[],editingId='',newBookTarget='add';
 let config={owner:'',repo:'',file:'publish_data.json',token:''},meta={target:'',fingerprint:null,sha:null,lastSyncAt:null};
-let syncing=false,autoTimer=null,toastTimer=null;
+let syncing=false,syncQueued=false,autoTimer=null,toastTimer=null;
 const collator=new Intl.Collator('zh-CN-u-co-pinyin',{numeric:true,sensitivity:'base'});
 
 function clean(v){return String(v??'').normalize('NFKC').trim()}
@@ -319,9 +319,43 @@ function openConfig(){
 }
 function loadMeta(){try{const x=JSON.parse(lg(META_KEY)||'{}')||{};meta={target:clean(x.target),fingerprint:typeof x.fingerprint==='string'?x.fingerprint:null,sha:clean(x.sha)||null,lastSyncAt:clean(x.lastSyncAt)||null}}catch(e){}}
 function saveMeta(){ls(META_KEY,JSON.stringify(meta))}
-function record(snapshot,sha){meta={target:target(),fingerprint:fingerprint(snapshot),sha:sha||null,lastSyncAt:new Date().toISOString()};saveMeta();lastSyncTime.textContent=`已同步 ${new Date(meta.lastSyncAt).toLocaleString()}`}
+function ensureTarget(){
+    const t=target();
+    if(meta.target!==t){
+        meta={target:t,fingerprint:null,sha:null,lastSyncAt:null};
+        saveMeta()
+    }
+}
+function record(snapshot,sha){
+    meta={target:target(),fingerprint:fingerprint(snapshot),sha:sha||null,lastSyncAt:new Date().toISOString()};
+    saveMeta();
+    lastSyncTime.textContent=`已同步 ${new Date(meta.lastSyncAt).toLocaleString()}`
+}
+function backups(){
+    const s=lg(BACKUP_KEY);
+    if(!s)return[];
+    try{
+        const x=JSON.parse(s);
+        return Array.isArray(x)?x.filter(v=>v&&v.state).slice(-10):[]
+    }catch(e){return[]}
+}
+function backup(snapshot,source){
+    const list=backups();
+    list.push({createdAt:new Date().toISOString(),source,target:target(),state:norm(snapshot)});
+    ls(BACKUP_KEY,JSON.stringify(list.slice(-10)))
+}
 async function api(method,endpoint,body=null){
-    const r=await fetch(`https://api.github.com/repos/${encodeURIComponent(config.owner)}/${encodeURIComponent(config.repo)}/${endpoint}`,{method,headers:{Authorization:`Bearer ${config.token}`,Accept:'application/vnd.github+json',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
+    const r=await fetch(`https://api.github.com/repos/${encodeURIComponent(config.owner)}/${encodeURIComponent(config.repo)}/${endpoint}`,{
+        method,
+        headers:{
+            Authorization:`Bearer ${config.token}`,
+            Accept:'application/vnd.github+json',
+            'X-GitHub-Api-Version':'2026-03-10',
+            ...(body!==null?{'Content-Type':'application/json'}:{})
+        },
+        cache:'no-store',
+        ...(body!==null?{body:JSON.stringify(body)}:{})
+    });
     const raw=await r.text();let data=null;if(raw)try{data=JSON.parse(raw)}catch(e){data={message:raw}};if(!r.ok){const er=new Error(data?.message||`HTTP ${r.status}`);er.status=r.status;throw er}return data
 }
 function toB64(s){const bytes=new TextEncoder().encode(s);let bin='';for(let i=0;i<bytes.length;i+=0x8000)bin+=String.fromCharCode(...bytes.subarray(i,i+0x8000));return btoa(bin)}
@@ -334,27 +368,322 @@ async function writeRemote(snapshot,sha){
     const body={message:`更新 Publish 数据 - ${new Date().toLocaleString()}`,content:toB64(raw)};if(sha)body.sha=sha;
     const r=await api('PUT',`contents/${pathEncode(config.file)}`,body);return r?.content?.sha||null
 }
-async function sync(showResult=true){
-    if(!admin()){show('请先配置 Token','error');return false}if(syncing)return false;syncing=true;syncBtn.disabled=true;status('syncing','同步中…');
-    try{
-        const remote=await readRemote(),localFp=fingerprint(state),remoteFp=fingerprint(remote.state),baseFp=meta.target===target()?meta.fingerprint:null;
-        if(!remote.exists){record(state,await writeRemote(state,null))}
-        else if(localFp===remoteFp){record(state,remote.sha)}
-        else if(baseFp&&localFp!==baseFp&&remoteFp===baseFp){record(state,await writeRemote(state,remote.sha))}
-        else if(baseFp&&localFp===baseFp&&remoteFp!==baseFp){state=remote.state;render();record(state,remote.sha)}
-        else{const useLocal=confirm('本地与 GitHub 数据不同。\n\n确定：用当前网页数据覆盖 GitHub。\n取消：采用 GitHub 数据。');if(useLocal)record(state,await writeRemote(state,remote.sha));else{state=remote.state;render();record(state,remote.sha)}}
-        status('online','公开阅读 · 管理已连接');if(showResult)show('同步完成','success');return true
-    }catch(e){console.error(e);status('offline','管理同步失败');show(`同步失败：${e.message}`,'error');return false}
-    finally{syncing=false;syncBtn.disabled=false}
+async function adoptRemote(expectedLocalFingerprint,showResult){
+    if(fingerprint(state)!==expectedLocalFingerprint){
+        syncQueued=true;
+        return{ok:false,conflict:false}
+    }
+
+    const latest=await readRemote();
+    if(!latest.exists){
+        status('offline','云端文件已删除');
+        show('云端数据文件已删除，未覆盖本地数据','error');
+        return{ok:false,conflict:true}
+    }
+
+    if(fingerprint(state)!==expectedLocalFingerprint){
+        syncQueued=true;
+        return{ok:false,conflict:false}
+    }
+
+    backup(state,'before_remote_replace');
+    state=latest.state;
+    render();
+    record(state,latest.sha);
+    status('online','公开阅读 · 管理已连接');
+    if(showResult)show(`已采用 GitHub 最新数据，共 ${state.entries.length} 个条目`,'success');
+    return{ok:true,conflict:false}
 }
-function schedule(){saveLocal();if(!admin())return;clearTimeout(autoTimer);autoTimer=setTimeout(()=>sync(false),AUTO_DELAY)}
-async function loadPublic(){
-    status('syncing','正在读取公开数据…');
+
+async function sync(showResult=true,interactive=showResult){
+    if(!admin()){
+        show('请先配置 Token','error');
+        return false
+    }
+    if(syncing){
+        syncQueued=true;
+        return false
+    }
+
+    clearTimeout(autoTimer);
+    autoTimer=null;
+    syncing=true;
+    syncBtn.disabled=true;
+    status('syncing','同步中…');
+
+    let result={ok:false,conflict:false};
+
     try{
-        const r=await fetch(publicUrl(),{cache:'no-store'});if(!r.ok)throw new Error(`HTTP ${r.status}`);
-        const pub=norm(await r.json()),local=loadLocal(),baseFp=meta.target===target()?meta.fingerprint:null,unsynced=admin()&&local&&baseFp&&fingerprint(local)!==baseFp;
-        state=unsynced?local:pub;render();status(unsynced?'offline':'online',unsynced?'有未同步修改':'公开阅读');lastSyncTime.textContent=unsynced?'显示当前浏览器中的未同步管理数据':`公开数据 · ${state.entries.length} 条`
-    }catch(e){const local=loadLocal();state=local||{entries:[],bookNumbers:[]};render();status('offline','公开数据读取失败');lastSyncTime.textContent=local?'暂时显示浏览器缓存':'请确认 publish_data.json 与网页位于同一发布目录'}
+        ensureTarget();
+
+        const local=norm(state);
+        const localFp=fingerprint(local);
+        const baseFp=meta.fingerprint;
+        const hasBase=typeof baseFp==='string';
+        const remote=await readRemote();
+
+        if(!remote.exists){
+            if(hasBase){
+                status('offline','云端文件已删除');
+
+                if(!interactive){
+                    show('云端 Publish 数据文件已删除；请点击“同步”决定是否重新创建','error');
+                    result={ok:false,conflict:true};
+                }else if(confirm('检测到云端 Publish 数据文件已删除。\n\n确定：用当前本地数据重新创建云端文件。\n取消：保留本地数据。')){
+                    const latest=await readRemote();
+                    if(latest.exists){
+                        const err=new Error('确认期间云端文件已重新出现');
+                        err.status=409;
+                        throw err
+                    }
+                    const sha=await writeRemote(local,null);
+                    record(local,sha);
+                    status('online','公开阅读 · 管理已连接');
+                    if(showResult)show('已重新创建云端文件并完成同步','success');
+                    result={ok:true,conflict:false,uploadedFingerprint:localFp}
+                }else{
+                    result={ok:false,conflict:true}
+                }
+            }else{
+                const sha=await writeRemote(local,null);
+                record(local,sha);
+                status('online','公开阅读 · 管理已连接');
+                if(showResult)show('已创建云端文件并完成同步','success');
+                result={ok:true,conflict:false,uploadedFingerprint:localFp}
+            }
+        }else{
+            const remoteFp=fingerprint(remote.state);
+
+            if(localFp===remoteFp){
+                record(local,remote.sha);
+                status('online','公开阅读 · 管理已连接');
+                if(showResult)show('本地与 GitHub 已一致','success');
+                result={ok:true,conflict:false}
+            }else{
+                const localChanged=!hasBase||localFp!==baseFp;
+                const remoteChanged=!hasBase||remoteFp!==baseFp;
+
+                if(hasBase&&localChanged&&!remoteChanged){
+                    const sha=await writeRemote(local,remote.sha);
+                    record(local,sha);
+                    status('online','公开阅读 · 管理已连接');
+                    if(showResult)show('已将本地最新数据同步到 GitHub','success');
+                    result={ok:true,conflict:false,uploadedFingerprint:localFp}
+                }else if(hasBase&&!localChanged&&remoteChanged){
+                    result=await adoptRemote(localFp,showResult)
+                }else if(!interactive){
+                    status('offline','存在同步冲突');
+                    show('本地和 GitHub 数据都发生了变化；已停止自动同步，请点击“同步”手动选择版本','error');
+                    result={ok:false,conflict:true}
+                }else{
+                    status('offline','存在同步冲突');
+
+                    const useLocal=confirm(
+                        '检测到 Publish 本地数据与 GitHub 数据不同。\n\n' +
+                        '确定：用当前网页数据覆盖 GitHub。\n' +
+                        '取消：继续选择是否采用 GitHub 数据。'
+                    );
+
+                    if(useLocal){
+                        backup(remote.state,'remote_before_local_override');
+                        const sha=await writeRemote(local,remote.sha);
+                        record(local,sha);
+                        status('online','公开阅读 · 管理已连接');
+                        show('已用当前网页数据覆盖 GitHub','success');
+                        result={ok:true,conflict:false,uploadedFingerprint:localFp}
+                    }else if(confirm(
+                        '是否采用 GitHub 最新数据覆盖当前网页？\n\n' +
+                        '当前本地数据会先保存到浏览器备份。'
+                    )){
+                        result=await adoptRemote(fingerprint(state),true)
+                    }else{
+                        show('已取消同步，没有覆盖任何数据','info');
+                        result={ok:false,conflict:true}
+                    }
+                }
+            }
+        }
+    }catch(e){
+        console.error(e);
+        status('offline',e.status===409?'存在同步冲突':'管理同步失败');
+        show(`同步失败：${e.message}`,'error');
+        result={ok:false,conflict:e.status===409}
+    }finally{
+        syncing=false;
+        syncBtn.disabled=false
+    }
+
+    if(result.uploadedFingerprint&&fingerprint(state)!==result.uploadedFingerprint){
+        syncQueued=true
+    }
+
+    if(syncQueued&&!result.conflict){
+        syncQueued=false;
+        setTimeout(()=>sync(false,false),0)
+    }else if(result.conflict){
+        syncQueued=false
+    }
+
+    return result.ok
+}
+function schedule(){
+    saveLocal();
+    if(!admin())return;
+    clearTimeout(autoTimer);
+    autoTimer=setTimeout(()=>{
+        autoTimer=null;
+        sync(false,false)
+    },AUTO_DELAY)
+}
+async function loadPublic(){
+    // 普通访客才读取 GitHub Pages / 静态站点中的公开 publish_data.json。
+    // 管理员刷新时绝不允许这个可能延迟发布的文件覆盖管理数据。
+    status('syncing','正在读取公开数据…');
+
+    try{
+        const r=await fetch(publicUrl(),{cache:'no-store'});
+        if(!r.ok)throw new Error(`HTTP ${r.status}`);
+
+        state=norm(await r.json());
+        render();
+        status('online','公开阅读');
+        lastSyncTime.textContent=`公开数据 · ${state.entries.length} 条`
+    }catch(e){
+        console.error(e);
+        const local=loadLocal();
+        state=local||{entries:[],bookNumbers:[]};
+        render();
+        status('offline','公开数据读取失败');
+        lastSyncTime.textContent=local?'暂时显示浏览器缓存':'请确认 publish_data.json 与网页位于同一发布目录'
+    }
+}
+
+async function loadAdminState(){
+    // 管理员刷新时，唯一参与判断的数据源：
+    // 1) 当前浏览器本地缓存；
+    // 2) GitHub Contents API 中真正最新的 publish_data.json；
+    // 3) 上一次成功同步记录的 fingerprint。
+    // 不读取公开 Pages 文件，因此 Pages 发布延迟不能再造成“刷新丢数据”。
+
+    status('syncing','正在读取管理数据…');
+    ensureTarget();
+
+    const cached=loadLocal();
+    const hasCached=lg(STATE_KEY)!==null;
+    const baseFp=meta.fingerprint;
+    const hasBase=typeof baseFp==='string';
+
+    try{
+        const remote=await readRemote();
+
+        if(!remote.exists){
+            if(hasCached&&cached){
+                state=cached;
+                render();
+                status('offline','管理已连接 · 云端文件不存在');
+                lastSyncTime.textContent='已保护本地数据；请手动同步决定是否重新创建云端文件'
+            }else{
+                state={entries:[],bookNumbers:[]};
+                render();
+                status('online','公开阅读 · 管理已连接');
+                lastSyncTime.textContent='云端数据文件尚未创建'
+            }
+            return
+        }
+
+        if(!hasCached||!cached){
+            state=remote.state;
+            render();
+            record(state,remote.sha);
+            status('online','公开阅读 · 管理已连接');
+            return
+        }
+
+        const localFp=fingerprint(cached);
+        const remoteFp=fingerprint(remote.state);
+
+        if(localFp===remoteFp){
+            state=cached;
+            render();
+            record(state,remote.sha);
+            status('online','公开阅读 · 管理已连接');
+            return
+        }
+
+        if(hasBase){
+            const localChanged=localFp!==baseFp;
+            const remoteChanged=remoteFp!==baseFp;
+
+            if(localChanged&&!remoteChanged){
+                // 本地有尚未上传的新数据：保留本地，随后安全自动同步。
+                state=cached;
+                render();
+                status('offline','待同步');
+                lastSyncTime.textContent='发现本地未同步修改';
+                schedule();
+                return
+            }
+
+            if(!localChanged&&remoteChanged){
+                // 只有 GitHub 变了：采用 GitHub 最新数据。
+                backup(cached,'before_startup_remote_replace');
+                state=remote.state;
+                render();
+                record(state,remote.sha);
+                status('online','公开阅读 · 管理已连接');
+                return
+            }
+
+            if(localChanged&&remoteChanged){
+                // 两边都变了：禁止自动覆盖任何一侧。
+                state=cached;
+                render();
+                status('offline','存在同步冲突');
+                lastSyncTime.textContent='本地和 GitHub 都有修改；请点击“同步”选择版本';
+                show('检测到本地和 GitHub 都有修改，已保留本地数据，没有自动覆盖任何内容','error');
+                return
+            }
+        }
+
+        // 没有可靠同步基线时，只保护本地，要求人工确认。
+        state=cached;
+        render();
+        status('offline','需要确认同步');
+        lastSyncTime.textContent='本地与 GitHub 数据不同；请点击“同步”选择版本';
+        show('本地与 GitHub 数据不同，已保留本地数据，请手动同步确认版本','info')
+    }catch(e){
+        console.error(e);
+
+        if(e.status===401){
+            // Token 失效也不能用公开旧文件覆盖管理员缓存。
+            config.token='';
+            updateAdmin();
+
+            if(cached){
+                state=cached;
+                render();
+                status('offline','Token 已失效 · 本地数据已保护');
+                lastSyncTime.textContent='已保留当前浏览器中的管理数据；重新配置 Token 后再同步';
+                show('管理 Token 已失效；已保护本地数据，没有读取公开旧文件覆盖它','error')
+            }else{
+                await loadPublic();
+                show('管理 Token 已失效，当前已切换为公开阅读','error')
+            }
+            return
+        }
+
+        if(cached){
+            state=cached;
+            render();
+            status('offline','管理云端暂不可用');
+            lastSyncTime.textContent='已保护本地管理数据，没有执行覆盖';
+            show(`GitHub 管理数据读取失败：${e.message}；已保留本地数据`,'error')
+        }else{
+            status('offline','管理云端读取失败');
+            lastSyncTime.textContent='没有可恢复的本地管理数据';
+            show(`GitHub 管理数据读取失败：${e.message}`,'error')
+        }
+    }
 }
 
 bookTrigger.addEventListener('click',e=>{e.stopPropagation();togglePanel(bookPanel);editBookPanel.classList.add('hidden')});
@@ -379,7 +708,17 @@ document.addEventListener('click',e=>{if(!bookMulti.contains(e.target))bookPanel
 document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;closePanels();[editModal,newBookModal,bookManagerModal,configModal].forEach(x=>x.classList.add('hidden'))});
 backToTopBtn.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));addEventListener('scroll',()=>backToTopBtn.classList.toggle('visible',scrollY>260),{passive:true});
 
-loadConfig();loadMeta();updateAdmin();renderMulti('add');renderMulti('edit');loadPublic().then(()=>{if(admin())sync(false)});
+loadConfig();
+loadMeta();
+updateAdmin();
+renderMulti('add');
+renderMulti('edit');
+
+if(admin()){
+    loadAdminState()
+}else{
+    loadPublic()
+}
 })();
 </script>
 </body>
