@@ -319,6 +319,13 @@
       ]
     },
     {
+      "id": "e8062da0-d50f-4bee-b241-03b618769b33",
+      "publisher": "[北京大学出版社](https://book.douban.com/press/2690/?order=time)",
+      "bookNumbers": [
+        "7-301"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -426,6 +433,7 @@
     "7-5438",
     "7-5561",
     "7-217",
-    "7-225"
+    "7-225",
+    "7-301"
   ]
 }
