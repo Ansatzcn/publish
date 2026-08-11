@@ -1220,6 +1220,13 @@
       ]
     },
     {
+      "id": "12fec6d0-6985-4422-9be8-7d9d46c9244d",
+      "publisher": "[上海音乐出版社](https://book.douban.com/press/2186/?order=time)",
+      "bookNumbers": [
+        "7-5523"
+      ]
+    },
+    {
       "id": "7f869c9f-e4c2-4ce3-af95-b9fdd39d1a87",
       "publisher": "[延边教育出版社](https://book.douban.com/press/2322/?order=time)",
       "bookNumbers": [
@@ -1492,6 +1499,7 @@
     "7-5505",
     "7-5519",
     "7-5520",
+    "7-5523",
     "7-5524",
     "7-5525",
     "7-5535",
