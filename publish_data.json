@@ -1073,6 +1073,13 @@
       ]
     },
     {
+      "id": "a75cc543-f24c-4883-a9ca-10ef315f9be3",
+      "publisher": "[龙门书局](https://book.douban.com/press/2801/?order=time)",
+      "bookNumbers": [
+        "7-5088"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1309,6 +1316,7 @@
     "7-5085",
     "7-5086",
     "7-5087",
+    "7-5088",
     "7-5095",
     "7-5097",
     "7-5100",
