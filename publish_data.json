@@ -1220,6 +1220,13 @@
       ]
     },
     {
+      "id": "8cdd5d5b-e006-4c2a-9dba-00b66bdae684",
+      "publisher": "[上海文化出版社](https://book.douban.com/press/2389/?order=time)",
+      "bookNumbers": [
+        "7-5535"
+      ]
+    },
+    {
       "id": "5be34e27-6d8f-4193-89cc-6afe2e95f09b",
       "publisher": "[江苏凤凰科学技术出版社](https://book.douban.com/press/2569/?order=time)",
       "bookNumbers": [
@@ -1470,6 +1477,7 @@
     "7-5505",
     "7-5519",
     "7-5520",
+    "7-5535",
     "7-5536",
     "7-5537",
     "7-5538",
