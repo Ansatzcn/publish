@@ -900,6 +900,13 @@
       ]
     },
     {
+      "id": "2ea0df3f-601d-49d8-a011-8df8bb1cba30",
+      "publisher": "[中国文联出版社](https://book.douban.com/press/2493/?order=time)",
+      "bookNumbers": [
+        "7-5059"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1106,6 +1113,7 @@
     "7-5056",
     "7-5057",
     "7-5058",
+    "7-5059",
     "7-5095",
     "7-5097",
     "7-5118",
