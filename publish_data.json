@@ -1000,6 +1000,13 @@
       ]
     },
     {
+      "id": "ddefffb6-3772-4794-b230-32b25947fe44",
+      "publisher": "[学苑出版社](https://book.douban.com/press/2758/?order=time)",
+      "bookNumbers": [
+        "7-5077"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1219,6 +1226,7 @@
     "7-5073",
     "7-5074",
     "7-5075",
+    "7-5077",
     "7-5095",
     "7-5097",
     "7-5100",
