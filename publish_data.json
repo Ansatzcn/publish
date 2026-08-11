@@ -842,6 +842,13 @@
       ]
     },
     {
+      "id": "799af555-8c5e-447b-8a27-aa2cf7bbc831",
+      "publisher": "[农村读物出版社](https://book.douban.com/press/2289/?order=time)",
+      "bookNumbers": [
+        "7-5048"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1040,6 +1047,7 @@
     "7-5045",
     "7-5046",
     "7-5047",
+    "7-5048",
     "7-5095",
     "7-5097",
     "7-5118",
