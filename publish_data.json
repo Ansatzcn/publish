@@ -1044,6 +1044,13 @@
       ]
     },
     {
+      "id": "72e2c66a-28bd-4697-8b33-e2db4777aada",
+      "publisher": "[中国水利水电出版社](https://book.douban.com/press/2166/?order=time)",
+      "bookNumbers": [
+        "7-5084"
+      ]
+    },
+    {
       "id": "2b57f3f1-058d-4313-bbcd-2afea751b8f0",
       "publisher": "[五洲传播出版社](https://book.douban.com/press/2300/?order=time)",
       "bookNumbers": [
@@ -1291,6 +1298,7 @@
     "7-5080",
     "7-5081",
     "7-5082",
+    "7-5084",
     "7-5085",
     "7-5086",
     "7-5095",
