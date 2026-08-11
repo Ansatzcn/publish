@@ -878,6 +878,13 @@
       ]
     },
     {
+      "id": "c44e2852-450b-4b43-ae89-8157e5dea040",
+      "publisher": "[连环画出版社](https://book.douban.com/press/2797/?order=time)",
+      "bookNumbers": [
+        "7-5056"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1081,6 +1088,7 @@
     "7-5050",
     "7-5051",
     "7-5054",
+    "7-5056",
     "7-5095",
     "7-5097",
     "7-5118",
