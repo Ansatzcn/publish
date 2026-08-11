@@ -701,6 +701,13 @@
       ]
     },
     {
+      "id": "4c1612b1-89d8-4334-b62d-63a59d0fae6d",
+      "publisher": "[地震出版社](https://book.douban.com/press/2152/?order=time)",
+      "bookNumbers": [
+        "7-5028"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -872,6 +879,7 @@
     "7-5024",
     "7-5026",
     "7-5027",
+    "7-5028",
     "7-5095",
     "7-5097",
     "7-5136",
