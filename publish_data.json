@@ -670,6 +670,13 @@
       ]
     },
     {
+      "id": "11093a23-c79e-4474-b2dd-813ee779bd00",
+      "publisher": "[科学技术文献出版社](https://book.douban.com/press/2786/?order=time)",
+      "bookNumbers": [
+        "7-5023"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -830,6 +837,7 @@
     "7-5020",
     "7-5021",
     "7-5022",
+    "7-5023",
     "7-5095",
     "7-5097",
     "7-5136",
