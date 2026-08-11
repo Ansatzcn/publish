@@ -1308,6 +1308,13 @@
       ]
     },
     {
+      "id": "78706fbd-d570-4981-93d3-5ab961ab80f5",
+      "publisher": "[古吴轩出版社](https://book.douban.com/press/2681/?order=time)",
+      "bookNumbers": [
+        "7-5546"
+      ]
+    },
+    {
       "id": "99d92016-83e9-4bff-b388-bc7c5d7be4ad",
       "publisher": "[华东师范大学出版社](https://book.douban.com/press/2486/?order=time)",
       "bookNumbers": [
@@ -1548,6 +1555,7 @@
     "7-5540",
     "7-5541",
     "7-5545",
+    "7-5546",
     "7-5561",
     "7-5617",
     "7-5634",
