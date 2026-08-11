@@ -694,6 +694,13 @@
       ]
     },
     {
+      "id": "09c8b552-8355-40e3-9e4b-6e1d89505559",
+      "publisher": "[海洋出版社](https://book.douban.com/press/2404/?order=time)",
+      "bookNumbers": [
+        "7-5027"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -864,6 +871,7 @@
     "7-5023",
     "7-5024",
     "7-5026",
+    "7-5027",
     "7-5095",
     "7-5097",
     "7-5136",
