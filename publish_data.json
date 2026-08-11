@@ -942,6 +942,13 @@
       ]
     },
     {
+      "id": "c5182ef7-367d-4769-bd7d-f5d0986f9e6b",
+      "publisher": "[解放军出版社](https://book.douban.com/press/2307/?order=time)",
+      "bookNumbers": [
+        "7-5065"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1153,6 +1160,7 @@
     "7-5062",
     "7-5063",
     "7-5064",
+    "7-5065",
     "7-5095",
     "7-5097",
     "7-5100",
