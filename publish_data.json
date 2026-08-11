@@ -864,6 +864,13 @@
       ]
     },
     {
+      "id": "d23dcfe7-8ddb-4451-b7ab-a7174d834336",
+      "publisher": "[红旗出版社](https://book.douban.com/press/2710/?order=time)",
+      "bookNumbers": [
+        "7-5051"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1065,6 +1072,7 @@
     "7-5048",
     "7-5049",
     "7-5050",
+    "7-5051",
     "7-5095",
     "7-5097",
     "7-5118",
