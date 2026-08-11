@@ -1000,6 +1000,13 @@
       ]
     },
     {
+      "id": "fbfe4d04-ac74-401a-ac8e-d9931a85643e",
+      "publisher": "[中国ISBN中心](https://book.douban.com/press/2872/?order=time)",
+      "bookNumbers": [
+        "7-5076"
+      ]
+    },
+    {
       "id": "ddefffb6-3772-4794-b230-32b25947fe44",
       "publisher": "[学苑出版社](https://book.douban.com/press/2758/?order=time)",
       "bookNumbers": [
@@ -1226,6 +1233,7 @@
     "7-5073",
     "7-5074",
     "7-5075",
+    "7-5076",
     "7-5077",
     "7-5095",
     "7-5097",
