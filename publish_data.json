@@ -1104,6 +1104,13 @@
       ]
     },
     {
+      "id": "99dcc470-823d-4f6a-bb2e-f43b0cd06313",
+      "publisher": "[格致出版社](https://book.douban.com/press/2366/?order=time)",
+      "bookNumbers": [
+        "7-5432"
+      ]
+    },
+    {
       "id": "8e2d1c57-d137-4b41-a876-6520fddcb788",
       "publisher": "[上海科学技术文献出版社](https://book.douban.com/press/2273/?order=time)",
       "bookNumbers": [
@@ -1357,6 +1364,7 @@
     "7-5244",
     "7-5315",
     "7-5316",
+    "7-5432",
     "7-5438",
     "7-5439",
     "7-5486",
