@@ -1301,6 +1301,13 @@
       ]
     },
     {
+      "id": "4a09aa64-d565-4336-9a62-6af7985e07bd",
+      "publisher": "[河北教育出版社](https://book.douban.com/press/2352/?order=time)",
+      "bookNumbers": [
+        "7-5545"
+      ]
+    },
+    {
       "id": "99d92016-83e9-4bff-b388-bc7c5d7be4ad",
       "publisher": "[华东师范大学出版社](https://book.douban.com/press/2486/?order=time)",
       "bookNumbers": [
@@ -1540,6 +1547,7 @@
     "7-5538",
     "7-5540",
     "7-5541",
+    "7-5545",
     "7-5561",
     "7-5617",
     "7-5634",
