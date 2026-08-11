@@ -1373,6 +1373,13 @@
       ]
     },
     {
+      "id": "0e474e30-7689-4cfa-b554-65447c2f8562",
+      "publisher": "[西南交通大学出版社](https://book.douban.com/press/2151/?order=time)",
+      "bookNumbers": [
+        "7-5643"
+      ]
+    },
+    {
       "id": "fe20745e-d045-4d2b-add8-cdb9a243bd52",
       "publisher": "[中国海洋大学出版社](https://book.douban.com/press/2829/?order=time)",
       "bookNumbers": [
@@ -1614,6 +1621,7 @@
     "7-5617",
     "7-5624",
     "7-5634",
+    "7-5643",
     "7-5670",
     "7-5675",
     "7-5680",
