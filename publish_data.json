@@ -1220,6 +1220,13 @@
       ]
     },
     {
+      "id": "c3d0d529-092a-42b8-8912-a5e6d9757db2",
+      "publisher": "[阳光出版社](https://book.douban.com/press/2487/?order=time)",
+      "bookNumbers": [
+        "7-5525"
+      ]
+    },
+    {
       "id": "8cdd5d5b-e006-4c2a-9dba-00b66bdae684",
       "publisher": "[上海文化出版社](https://book.douban.com/press/2389/?order=time)",
       "bookNumbers": [
@@ -1477,6 +1484,7 @@
     "7-5505",
     "7-5519",
     "7-5520",
+    "7-5525",
     "7-5535",
     "7-5536",
     "7-5537",
