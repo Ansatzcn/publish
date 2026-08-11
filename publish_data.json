@@ -892,6 +892,13 @@
       ]
     },
     {
+      "id": "ebd0dd7c-a98f-4171-81d0-febbf1ab54d2",
+      "publisher": "[经济科学出版社](https://book.douban.com/press/2512/?order=time)",
+      "bookNumbers": [
+        "7-5058"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1097,6 +1104,7 @@
     "7-5054",
     "7-5056",
     "7-5057",
+    "7-5058",
     "7-5095",
     "7-5097",
     "7-5118",
