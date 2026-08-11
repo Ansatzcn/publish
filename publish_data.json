@@ -835,6 +835,13 @@
       ]
     },
     {
+      "id": "fc44e18c-ec16-4f70-9ee0-c732e89ff9a4",
+      "publisher": "[中国财富出版社](https://book.douban.com/press/2756/?order=time)",
+      "bookNumbers": [
+        "7-5047"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1032,6 +1039,7 @@
     "7-5044",
     "7-5045",
     "7-5046",
+    "7-5047",
     "7-5095",
     "7-5097",
     "7-5118",
