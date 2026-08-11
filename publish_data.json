@@ -1014,6 +1014,13 @@
       ]
     },
     {
+      "id": "a81e08b2-e07a-4050-98c6-7881a2bb3956",
+      "publisher": "[中国国际广播出版社](https://book.douban.com/press/2545/?order=time)",
+      "bookNumbers": [
+        "7-5078"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1235,6 +1242,7 @@
     "7-5075",
     "7-5076",
     "7-5077",
+    "7-5078",
     "7-5095",
     "7-5097",
     "7-5100",
