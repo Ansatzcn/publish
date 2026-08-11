@@ -949,6 +949,13 @@
       "bookNumbers": [
         "7-5670"
       ]
+    },
+    {
+      "id": "5db2c3c6-c7b0-4cdd-a560-4819d03778b9",
+      "publisher": "[朝华出版社](https://book.douban.com/press/2794/?order=time)",
+      "bookNumbers": [
+        "7-50543"
+      ]
     }
   ],
   "bookNumbers": [
@@ -1114,6 +1121,7 @@
     "7-5670",
     "7-5688",
     "7-5722",
-    "7-5759"
+    "7-5759",
+    "7-50543"
   ]
 }
