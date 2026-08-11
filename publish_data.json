@@ -1110,6 +1110,13 @@
       ]
     },
     {
+      "id": "ad48d5ca-a3ed-47d3-86c9-0280180e0890",
+      "publisher": "[中国法治出版社](https://book.douban.com/press/2437/?order=time)",
+      "bookNumbers": [
+        "7-5093"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1358,6 +1365,7 @@
     "7-5090",
     "7-5091",
     "7-5092",
+    "7-5093",
     "7-5095",
     "7-5097",
     "7-5100",
