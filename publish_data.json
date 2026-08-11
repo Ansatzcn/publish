@@ -871,6 +871,13 @@
       ]
     },
     {
+      "id": "5db2c3c6-c7b0-4cdd-a560-4819d03778b9",
+      "publisher": "[朝华出版社](https://book.douban.com/press/2794/?order=time)",
+      "bookNumbers": [
+        "7-5054"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -948,13 +955,6 @@
       "publisher": "[中国海洋大学出版社](https://book.douban.com/press/2829/?order=time)",
       "bookNumbers": [
         "7-5670"
-      ]
-    },
-    {
-      "id": "5db2c3c6-c7b0-4cdd-a560-4819d03778b9",
-      "publisher": "[朝华出版社](https://book.douban.com/press/2794/?order=time)",
-      "bookNumbers": [
-        "7-50543"
       ]
     }
   ],
@@ -1080,6 +1080,7 @@
     "7-5049",
     "7-5050",
     "7-5051",
+    "7-5054",
     "7-5095",
     "7-5097",
     "7-5118",
@@ -1121,7 +1122,6 @@
     "7-5670",
     "7-5688",
     "7-5722",
-    "7-5759",
-    "7-50543"
+    "7-5759"
   ]
 }
