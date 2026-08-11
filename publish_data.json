@@ -1243,6 +1243,13 @@
       ]
     },
     {
+      "id": "31c070f0-a867-4fd3-a78f-2f3f24d0cbda",
+      "publisher": "[浙江古籍出版社](https://book.douban.com/press/2646/?order=time)",
+      "bookNumbers": [
+        "7-5540"
+      ]
+    },
+    {
       "id": "99d92016-83e9-4bff-b388-bc7c5d7be4ad",
       "publisher": "[华东师范大学出版社](https://book.douban.com/press/2486/?order=time)",
       "bookNumbers": [
@@ -1473,6 +1480,7 @@
     "7-5536",
     "7-5537",
     "7-5538",
+    "7-5540",
     "7-5561",
     "7-5617",
     "7-5634",
