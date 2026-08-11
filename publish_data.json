@@ -30,15 +30,6 @@
       ]
     },
     {
-      "id": "99d92016-83e9-4bff-b388-bc7c5d7be4ad",
-      "publisher": "[华东师范大学出版社](https://book.douban.com/press/2486/?order=time)",
-      "bookNumbers": [
-        "7-8-5760",
-        "7-5609",
-        "7-56753"
-      ]
-    },
-    {
       "id": "d4027234-d5ef-4caa-b0a6-ee8ad22468c7",
       "publisher": "[商务印书馆](https://book.douban.com/press/2851/?order=time)",
       "bookNumbers": [
@@ -1229,6 +1220,15 @@
       ]
     },
     {
+      "id": "99d92016-83e9-4bff-b388-bc7c5d7be4ad",
+      "publisher": "[华东师范大学出版社](https://book.douban.com/press/2486/?order=time)",
+      "bookNumbers": [
+        "7-5609",
+        "7-5760",
+        "7-56753"
+      ]
+    },
+    {
       "id": "fe20745e-d045-4d2b-add8-cdb9a243bd52",
       "publisher": "[中国海洋大学出版社](https://book.douban.com/press/2829/?order=time)",
       "bookNumbers": [
@@ -1241,7 +1241,6 @@
     "7-02",
     "7-03",
     "7-04",
-    "7-8-5760",
     "7-100",
     "7-101",
     "7-102",
@@ -1456,6 +1455,7 @@
     "7-5688",
     "7-5722",
     "7-5759",
+    "7-5760",
     "7-56753"
   ]
 }
