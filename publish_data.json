@@ -972,6 +972,13 @@
       ]
     },
     {
+      "id": "c6ba426b-fbee-4afc-b4e0-48370211cb99",
+      "publisher": "[中国中福会出版社](https://book.douban.com/press/2514/?order=time)",
+      "bookNumbers": [
+        "7-5072"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1187,6 +1194,7 @@
     "7-5066",
     "7-5067",
     "7-5068",
+    "7-5072",
     "7-5095",
     "7-5097",
     "7-5100",
