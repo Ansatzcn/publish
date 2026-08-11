@@ -1096,6 +1096,13 @@
       ]
     },
     {
+      "id": "e0232361-59f1-4e02-98ab-0e126b31a1be",
+      "publisher": "[人民军医出版社](https://book.douban.com/press/2388/?order=time)",
+      "bookNumbers": [
+        "7-5091"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1342,6 +1349,7 @@
     "7-5087",
     "7-5088",
     "7-5090",
+    "7-5091",
     "7-5095",
     "7-5097",
     "7-5100",
