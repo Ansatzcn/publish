@@ -780,6 +780,13 @@
       "bookNumbers": [
         "7-5520"
       ]
+    },
+    {
+      "id": "fe20745e-d045-4d2b-add8-cdb9a243bd52",
+      "publisher": "[中国海洋大学出版社](https://book.douban.com/press/2829/?order=time)",
+      "bookNumbers": [
+        "7-5670"
+      ]
     }
   ],
   "bookNumbers": [
@@ -912,6 +919,7 @@
     "7-5536",
     "7-5561",
     "7-5634",
+    "7-5670",
     "7-5688",
     "7-5722",
     "7-5759"
