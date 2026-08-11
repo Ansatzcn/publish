@@ -813,6 +813,13 @@
       ]
     },
     {
+      "id": "383c1207-033e-4313-808c-c4cad4d7fca5",
+      "publisher": "[中国商业出版社](https://book.douban.com/press/2172/?order=time)",
+      "bookNumbers": [
+        "7-5044"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -1007,6 +1014,7 @@
     "7-5041",
     "7-5042",
     "7-5043",
+    "7-5044",
     "7-5095",
     "7-5097",
     "7-5118",
