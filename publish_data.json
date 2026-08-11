@@ -806,6 +806,13 @@
       ]
     },
     {
+      "id": "2fe608b6-cfa4-46ac-8f63-fdbc84839fa2",
+      "publisher": "[中国广播影视出版社](https://book.douban.com/press/2910/?order=time)",
+      "bookNumbers": [
+        "7-5043"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -999,6 +1006,7 @@
     "7-5039",
     "7-5041",
     "7-5042",
+    "7-5043",
     "7-5095",
     "7-5097",
     "7-5118",
