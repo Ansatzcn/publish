@@ -759,7 +759,17 @@ bookPrimaryInput.addEventListener('keydown',e=>{
 editBookPrimaryInput.addEventListener('keydown',e=>{
     if(e.key==='Enter'){
         e.preventDefault();
-        commitBook('edit');
+
+        // 编辑时书号栏有内容：先把当前书号确认成标签。
+        if(clean(editBookPrimaryInput.value)){
+            commitBook('edit');
+            return;
+        }
+
+        // 书号已经全部确认成标签、输入框为空：
+        // 再按一次 Enter，等同点击“保存”。
+        editBookPanel.classList.add('hidden');
+        saveEdit();
     }
 });
 publishList.addEventListener('click',e=>{const edit=e.target.closest('.edit-btn');if(edit)return openEdit(edit.dataset.id);const del=e.target.closest('.delete-btn');if(del)deleteEntry(del.dataset.id)});
