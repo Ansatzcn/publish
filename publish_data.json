@@ -687,6 +687,13 @@
       ]
     },
     {
+      "id": "631d5249-75ec-4ca4-acfd-a00ed250802e",
+      "publisher": "[中国质检出版社](https://book.douban.com/press/2362/?order=time)",
+      "bookNumbers": [
+        "7-5026"
+      ]
+    },
+    {
       "id": "a05c0220-3190-44ee-8c75-99af96a4f86d",
       "publisher": "[社会科学文献出版社](https://book.douban.com/press/2622/?order=time)",
       "bookNumbers": [
@@ -856,6 +863,7 @@
     "7-5022",
     "7-5023",
     "7-5024",
+    "7-5026",
     "7-5095",
     "7-5097",
     "7-5136",
