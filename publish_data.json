@@ -1082,6 +1082,13 @@
       ]
     },
     {
+      "id": "afccfd31-1e26-4a54-be3f-f8a2ffbf9b07",
+      "publisher": "[学林出版社](https://book.douban.com/press/2521/?order=time)",
+      "bookNumbers": [
+        "7-5486"
+      ]
+    },
+    {
       "id": "3415e219-ce89-4667-9faa-80c7877f91bb",
       "publisher": "[文汇出版社](https://book.douban.com/press/2585/?order=time)",
       "bookNumbers": [
@@ -1318,6 +1325,7 @@
     "7-5316",
     "7-5438",
     "7-5439",
+    "7-5486",
     "7-5496",
     "7-5500",
     "7-5501",
