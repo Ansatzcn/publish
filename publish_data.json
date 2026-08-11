@@ -1220,6 +1220,13 @@
       ]
     },
     {
+      "id": "d46f871b-faa9-4e8b-99b9-163860d56caf",
+      "publisher": "[三秦出版社](https://book.douban.com/press/2816/?order=time)",
+      "bookNumbers": [
+        "7-5518"
+      ]
+    },
+    {
       "id": "9861a89d-209d-40c7-9869-7aa8b0f3b789",
       "publisher": "[泰山出版社](https://book.douban.com/press/2232/?order=time)",
       "bookNumbers": [
@@ -1513,6 +1520,7 @@
     "7-5505",
     "7-5506",
     "7-5508",
+    "7-5518",
     "7-5519",
     "7-5520",
     "7-5523",
