@@ -1172,6 +1172,13 @@
       ]
     },
     {
+      "id": "dc0f044a-10ec-4e9e-8cd3-79128a43bfca",
+      "publisher": "[上海三联书店](https://book.douban.com/press/2723/?order=time)",
+      "bookNumbers": [
+        "7-5426"
+      ]
+    },
+    {
       "id": "0b8511cb-60c9-41c4-aac4-3a7de7e87d6d",
       "publisher": "[上海科学普及出版社](https://book.douban.com/press/2318/?order=time)",
       "bookNumbers": [
@@ -1651,6 +1658,7 @@
     "7-5244",
     "7-5315",
     "7-5316",
+    "7-5426",
     "7-5427",
     "7-5428",
     "7-5429",
