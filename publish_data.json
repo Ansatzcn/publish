@@ -1142,6 +1142,13 @@
       ]
     },
     {
+      "id": "33c384b1-00b0-43c6-8475-f9ee0f363458",
+      "publisher": "[中央编译出版社](https://book.douban.com/press/2440/?order=time)★",
+      "bookNumbers": [
+        "7-5117"
+      ]
+    },
+    {
       "id": "7100f8d4-1a8d-491d-b873-2e56868eb9e6",
       "publisher": "[学习出版社](https://book.douban.com/press/2338/?order=time)★",
       "bookNumbers": [
@@ -1572,6 +1579,7 @@
     "7-5096",
     "7-5097",
     "7-5100",
+    "7-5117",
     "7-5118",
     "7-5136",
     "7-5147",
