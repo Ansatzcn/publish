@@ -52,7 +52,7 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <div class="form-grid">
 <div class="form-group">
 <label for="publisherInput">机构</label>
-<input type="text" id="publisherInput" autocomplete="off" autofocus>
+<input type="text" id="publisherInput" autocomplete="off" autofocus placeholder="可输入任意内容；[文字](链接) 会显示为蓝色链接">
 </div>
 <div class="form-group">
 <label for="bookPrimaryInput">书号</label>
@@ -84,7 +84,7 @@ button,input,select{font:inherit}button{cursor:pointer}.hidden{display:none!impo
 <div class="dialog">
 <div class="dialog-scroll">
 <h3>编辑</h3>
-<div class="form-group"><label for="editPublisher">机构</label><input type="text" id="editPublisher" autocomplete="off"></div>
+<div class="form-group"><label for="editPublisher">机构</label><input type="text" id="editPublisher" autocomplete="off" placeholder="可输入任意内容；[文字](链接) 会显示为蓝色链接"></div>
 <div class="form-group">
 <label for="editBookPrimaryInput">书号</label>
 <div class="book-combo" id="editBookMulti">
@@ -164,13 +164,12 @@ function uid(){return crypto?.randomUUID?crypto.randomUUID():`pub_${Date.now()}_
 function key(v){return clean(v).toLocaleLowerCase('zh-CN')}
 function uniq(values){const m=new Map();for(const raw of values||[]){const v=clean(raw);if(v&&!m.has(key(v)))m.set(key(v),v)}return [...m.values()]}
 function sortBookNumbers(values){return uniq(values).sort((a,b)=>collator.compare(clean(a),clean(b)))}
-function parsePublisher(v){
-    const s=clean(v),m=s.match(/^\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)$/i);
-    return m?{raw:s,text:m[1].trim(),url:m[2].trim()}:null
+function publisherPlainText(v){
+    return clean(v).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi,(_,text)=>clean(text))
 }
 function normEntry(x){
     if(!x||typeof x!=='object')return null;
-    const publisher=clean(x.publisher);if(!parsePublisher(publisher))return null;
+    const publisher=clean(x.publisher);if(!publisher)return null;
     return{id:clean(x.id)||uid(),publisher,bookNumbers:sortBookNumbers(Array.isArray(x.bookNumbers)?x.bookNumbers:[])};
 }
 function norm(v){
@@ -180,7 +179,7 @@ function norm(v){
         const aa=clean(a.bookNumbers[0]),bb=clean(b.bookNumbers[0]);
         if(aa&&!bb)return-1;if(!aa&&bb)return 1;
         const by=collator.compare(aa,bb);if(by!==0)return by;
-        return collator.compare(parsePublisher(a.publisher)?.text||a.publisher,parsePublisher(b.publisher)?.text||b.publisher)
+        return collator.compare(publisherPlainText(a.publisher),publisherPlainText(b.publisher))
     });
     const history=Array.isArray(s.bookNumbers)?sortBookNumbers(s.bookNumbers):sortBookNumbers(entries.flatMap(x=>x.bookNumbers));
     return{schemaVersion:1,entries,bookNumbers:history}
@@ -201,7 +200,16 @@ function status(kind,text){statusDot.className=`status-dot ${kind}`;statusText.t
 function saveLocal(){state=norm(state);ls(STATE_KEY,JSON.stringify(state))}
 function loadLocal(){const s=lg(STATE_KEY);if(!s)return null;try{return norm(JSON.parse(s))}catch(e){return null}}
 function updateAdmin(){const on=admin(),wasHidden=addSection.classList.contains('hidden');addSection.classList.toggle('hidden',!on);syncBtn.classList.toggle('hidden',!on);importBtn.classList.toggle('hidden',!on);if(on&&wasHidden)setTimeout(()=>publisherInput.focus(),40)}
-function displayPublisher(raw){const p=parsePublisher(raw);return p?`<a href="${attr(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.text)}</a>`:esc(raw)}
+function displayPublisher(raw){
+    const s=clean(raw),re=/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi;
+    let html='',last=0,m;
+    while((m=re.exec(s))){
+        html+=esc(s.slice(last,m.index));
+        html+=`<a href="${attr(m[2])}" target="_blank" rel="noopener noreferrer">${esc(m[1])}</a>`;
+        last=m.index+m[0].length
+    }
+    return html+esc(s.slice(last))
+}
 
 function renderMulti(which){
     const isAdd=which==='add';
@@ -284,11 +292,11 @@ function deleteHistory(v){
 }
 
 function addEntry(){
-    if(!admin())return;const parsed=parsePublisher(publisherInput.value);
-    if(!parsed){show('机构必须使用 [文字](链接) 格式','error');publisherInput.focus();return}
+    if(!admin())return;const publisher=clean(publisherInput.value);
+    if(!publisher){show('机构不能为空','error');publisherInput.focus();return}
     if(clean(bookPrimaryInput.value))commitBook('add');
     const books=sortBookNumbers(addSelected);
-    state.entries.push({id:uid(),publisher:parsed.raw,bookNumbers:books});
+    state.entries.push({id:uid(),publisher,bookNumbers:books});
     publisherInput.value='';
     bookPrimaryInput.value='';
     addSelected=[];
@@ -309,10 +317,10 @@ function openEdit(id){
 }
 function saveEdit(){
     const x=state.entries.find(e=>e.id===editingId);if(!x)return;
-    const parsed=parsePublisher(editPublisher.value);if(!parsed){show('机构必须使用 [文字](链接) 格式','error');editPublisher.focus();return}
+    const publisher=clean(editPublisher.value);if(!publisher){show('机构不能为空','error');editPublisher.focus();return}
     if(clean(editBookPrimaryInput.value))commitBook('edit');
     const books=sortBookNumbers(editSelected);
-    x.publisher=parsed.raw;
+    x.publisher=publisher;
     x.bookNumbers=books;
     editModal.classList.add('hidden');
     editingId='';
@@ -323,7 +331,7 @@ function saveEdit(){
     show('已保存','success')
 }
 function deleteEntry(id){
-    const x=state.entries.find(e=>e.id===id);if(!x||!confirm(`确定删除“${parsePublisher(x.publisher)?.text||x.publisher}”吗？`))return;
+    const x=state.entries.find(e=>e.id===id);if(!x||!confirm(`确定删除“${publisherPlainText(x.publisher)||x.publisher}”吗？`))return;
     state.entries=state.entries.filter(e=>e.id!==id);render();schedule();show('已删除','success')
 }
 
