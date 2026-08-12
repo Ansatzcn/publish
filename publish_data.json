@@ -1172,6 +1172,13 @@
       ]
     },
     {
+      "id": "b07982da-b852-41ad-b289-f92990305950",
+      "publisher": "[立信会计出版社](https://book.douban.com/press/2171/?order=time)",
+      "bookNumbers": [
+        "7-5429"
+      ]
+    },
+    {
       "id": "0000b691-a56f-4d74-bd35-168f3667663d",
       "publisher": "[武汉出版社](https://book.douban.com/press/2831/?order=time)",
       "bookNumbers": [
@@ -1630,6 +1637,7 @@
     "7-5244",
     "7-5315",
     "7-5316",
+    "7-5429",
     "7-5430",
     "7-5432",
     "7-5438",
