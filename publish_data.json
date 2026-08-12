@@ -1172,6 +1172,13 @@
       ]
     },
     {
+      "id": "0b8511cb-60c9-41c4-aac4-3a7de7e87d6d",
+      "publisher": "[上海科学普及出版社](https://book.douban.com/press/2318/?order=time)",
+      "bookNumbers": [
+        "7-5427"
+      ]
+    },
+    {
       "id": "1215f426-8d11-423a-8d7b-c742265c32a6",
       "publisher": "[上海科技教育出版社](https://book.douban.com/press/2324/?order=time)",
       "bookNumbers": [
@@ -1644,6 +1651,7 @@
     "7-5244",
     "7-5315",
     "7-5316",
+    "7-5427",
     "7-5428",
     "7-5429",
     "7-5430",
